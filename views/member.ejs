@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<% include ./partials/head %>
+
+<body class="ng-cloak" ng-app="startAPP" ng-controller="homeController">
+   <nav class="navbar navbar-dark navbar-expand-md bg-dark">
+      <div class="container-fluid"><a
+            class="navbar-brand text-monospace text-nowrap text-truncate text-break text-uppercase"
+            href="#">KEEP</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span
+               class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+         <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav text-monospace">
+               <li class="nav-item" role="presentation"><a class="nav-link active" href="#"><i
+                        class="fab fa-phoenix-framework"></i>&nbsp;Inicio</a></li>
+               <li class="nav-item" role="presentation"><a class="nav-link" href="#"><i
+                        class="far fa-envelope"></i>&nbsp;Correo</a></li>
+               <li class="nav-item" role="presentation"><a class="nav-link" href="#"><i
+                        class="far fa-calendar-alt fa-x2"></i><span class="badge badge-danger"
+                        style="position: relative;top: -12px;left: -9px;font-size: 10px;">2</span>Citas</a></li>
+               <li class="nav-item" role="presentation"><a class="nav-link" href="#"><i
+                        class="fas fa-chart-line"></i>&nbsp;Resultados</a></li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+               <li class="nav-item" role="presentation"><a class="nav-link active" href="#"><i
+                        class="far fa-bell"></i></a></li>
+               <li class="nav-item" role="presentation"><a class="nav-link" href="#">&nbsp;<i
+                        class="far fa-user"></i></a></li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col">
+            <div class="btn-group btn-group-toggle mt-2" data-toggle="buttons"><label
+                  class="btn btn-secondary active"><input type="radio" name="options" checked=""><i
+                     class="fas fa-chalkboard"></i></label><label class="btn btn-secondary"><input type="radio"
+                     name="options" checked=""><i class="fas fa-hand-holding-usd"></i></label></div>
+            <button class="btn btn-info mt-2 ml-2" type="button" data-toggle="modal" data-target="#myModal">Agregar
+               Prospecto</button>
+         </div>
+      </div>
+   </div>
+
+   <div class="container-fluid mt-2">
+      <div class="row">
+         <div class="col-3">
+            <div class="u-row-wrapper">
+               <div class="card card-fix">
+                  <div class="card-header arrowleft arrowleft-fix">
+                     <span>Prospectos</span>
+                     <span class="hESWvQ">{{prospectMoney | currency}}</span>
+                  </div>
+                  <div id="container">
+                     <div class="card-body-fix" id="dropbox">
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-3">
+            <div class="u-row-wrapper">
+               <div class="card card-fix">
+                  <div class="card-header arrowleft arrowleft-fix">
+                     <span>Cita</span>
+                     <span class="hESWvQ">
+                        <p>0</p>
+                     </span>
+                  </div>
+                  <div id="container">
+                     <div class="card-body-fix  droppable" id="2">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div class="col-3">
+            <div class="u-row-wrapper">
+               <div class="card card-fix">
+                  <div class="card-header arrowleft arrowleft-fix">
+                     <span>Propuesta</span>
+                     <span class="hESWvQ">0</span>
+                  </div>
+                  <div id="container">
+                     <div class="card-body-fix  droppable" id="3">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div class="col-3">
+            <div class="u-row-wrapper">
+               <div class="card">
+                  <div class="card-header arrowleft arrowleft-fix">
+                     <span>Cierre</span>
+                     <span class="hESWvQ">$ 0.00</span>
+                  </div>
+                  <div id="container-last">
+                     <div class="card-body-fix  droppable" id="4">
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+   </div>
+   <% include ./partials/modal %>
+   <!--CONTAINER-->
+   <% include ./partials/script %>
+   <script src="./controller/homeController.js"></script>
+   <script type="text/javascript">
+      $(function () {
+         $('#datetimepicker').datepicker();
+      });
+   </script>
+
+</body>
+
+</html>

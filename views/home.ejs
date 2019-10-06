@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+   <title>SIPKEEP</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+   <link rel="stylesheet" href="css/style-home.css">
+   <script src="plugin/modernizr/modernizr-2.6.2/js/modernizr-2.6.2.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+
+   <!-- alertify  -->
+   <link rel="stylesheet" href="plugin/alertify/css/alertify.min.css">
+   <link rel="stylesheet" href="plugin/alertify/css/themes/bootstrap.min.css">
+   <link rel="stylesheet" href="plugin/alertify/css/themes/default.min.css">
+   <link rel="stylesheet" href="plugin/alertify/css/themes/semantic.min.css">
+
+
+</head>
+
+<body class="ng-cloak" ng-app="startAPP" ng-controller="ticketController">
+   <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">
+         <img src=".././img/C-keep.png" alt="">
+         <!-- <span class="sip-tittle">KEEP</span> -->
+      </a>
+      <input id="user" type="hidden" readonly value="<%=user.userCode%>">
+      <input class="form-control form-control-dark w-50 minput" type="text" placeholder="Search" aria-label="Search">
+      <ul class="navbar-nav px-3 mfix">
+         <li class="nav-item text-nowrap">
+            <a class="nav-link" href="#">Sign out</a>
+         </li>
+      </ul>
+   </nav>
+   <div class="container-fluid">
+      <div class="row">
+         <!-- Sidebar -->
+         <div id="sidebar-wrapper">
+            <ul class="sidebar-nav nav nav-tabs" id="sidebar">
+               <li class="active">
+                  <a href="#tab1" data-toggle="tab" class="nav-item">
+                     <i class="fas fa-ticket-alt fa-2x"></i>
+                     <span>Ticket Support</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#tab2" data-toggle="tab" class="nav-item">
+                     <i class="fas fa-user-circle fa-2x"></i>
+                     <span>Assigned Ticket</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="container">
+            <header role="main" class="col-md-12 ml-sm-auto col-lg-10 px-4 top-menu">
+               <div
+                  class="d-flex justify-content-between flex-wrap flex-md-nowrap  pt-3 pb-2 mb-3 border-bottom ml-113">
+                  <h1 class="h2 tittle-top">Ticket Support</h1>
+               </div>
+            </header>
+            <nav class="navbar nav-movile navbars navbar-dark bg-dark ">
+               <ul class="sidebar-nav display-inline menu-movile nav nav-tabs">
+                  <li class="active">
+                     <a href="#tab1" data-toggle="tab" class="nav-item">
+                        <i class="fas fa-ticket-alt fa-2x"></i>
+                        <span>Ticket Support</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#tab2" data-toggle="tab" class="nav-item">
+                        <i class="fas fa-user-circle fa-2x"></i>
+                        <span class="movile-sd">Assigned Ticket</span>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+            <!-- <MAIN CONTENT> -->
+            <div class="tab-content">
+               <div class="tab-pane fade in active show" id="tab1">
+                  <div class="row row-d">
+                     <div class="col-12 col-md-3" ng-repeat="info in ticketInfo track by $index">
+                        <div class="card card-1 mb-3">
+                           <kbd class="float-right">
+                              <span class="float-left">{{info.ticketNum}}</span>
+                              <span class="float-right">{{info.lastUpdate  | date:'dd/MM/yyyy' }}</span>
+                           </kbd>
+
+                           <div class="card-body">
+                              <h5>{{info.name}}</h5>
+                              <span>Telefono</span>:
+                              <span class="phone">{{info.phone}}</span>
+                              <div class="container cb-fix">
+                                 <div class="row">
+                                    <div>
+                                       <div class="col-xs-6 col-md-4 text-center">
+                                          <div class="circle-badge"
+                                             ng-class="{'badge-success': info.typeService === 'H' , 'badge-dark': info.typeService === 'E'} ">
+                                             <strong>{{info.typeService}}</strong>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-footer">
+                              <button type="button" class="btn btn-sm btn-outline-primary"
+                                 ng-click="addOwner(info.ticketNum)">GET TICKET</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="tab-pane fade in active" id="tab2">
+                  <div class="row row-d">
+                     <div class="col-12 col-md-4 mb-2" ng-repeat="info in ticketOwner track by $index">
+                        <div class="card card-1">
+                           <header class="card-header mb-0"
+                              ng-class="{'card-type-h': info.typeService === 'H' , 'card-type-e': info.typeService === 'E'} ">
+                              <a data-toggle="collapse" data-target="#{{info.ticketNum}}" aria-expanded="true" class="">
+                                 <i class="icon-action fa fa-chevron-down"></i>
+                                 <span class="title">{{info.name}}</span>
+                                 <span class="float-right"
+                                    style="margin-right: 10px;">{{info.lastUpdate  | date:'dd/MM/yyyy' }}</span>
+                              </a>
+                           </header>
+                           <div class="collapse" id="{{info.ticketNum}}">
+                              <!-- card-body -->
+                              <div class="card-body ch-ck">
+                                 <div class="subject">
+                                    <span class="subject-1">Asunto</span>
+                                    <label for="success" class="btn btn-sm btn-success lebel-box" ng-if="info.status === 'I' ">In progress
+                                       <input type="checkbox" id="success" class="badgebox" checked disabled>
+                                       <span class="badge">&check;</span>
+                                    </label>
+                                    <p class="place-of-interest">
+                                       {{info.subject}}
+                                    </p>
+                                    <p class="message">
+                                      {{info.message}}
+                                    </p>
+                                 </div>
+                                 <div class="infoTicket">
+                                    <div class="attractions-wrapper">
+                                       <div class="attractions-row">
+                                          <div class="attractions-tile phone"></div>
+                                          <div class="attractions-details">
+                                             <div>{{info.phone}}</div>
+                                          </div>
+                                       </div>
+                                       <div class="attractions-row">
+                                          <div class="attractions-tile email"></div>
+                                          <div class="attractions-details">
+                                             <div>{{info.email}}</div>
+                                          </div>
+                                       </div>
+                                       <div class="attractions-row" ng-if="totalComents > 0">
+                                          <div class="attractions-tile dialog"></div>
+                                          <div class="attractions-details dialog" data-toggle="modal"
+                                             data-target="#comments" data-whatever="@mdo">
+                                             <div>Comentarios {{totalComents}}</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- card-body.// -->
+                              <!-- card-footer -->
+                              <div class="card-footer">
+                                 <div class="stats">
+                                    <div data-toggle="modal" data-target="#comment" data-whatever="@mdo">
+                                       <strong> Add Comment</strong>
+
+                                    </div>
+
+                                    <div data-toggle="modal" data-target="#resolve" data-whatever="@mdo" ng-click="addTicketNum(info.ticketNum)">
+                                       <strong>Resolve</strong>
+
+                                    </div>
+                                 </div>
+                              </div>
+                           </div> <!-- collapse .// -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--  </MAIN CONTENT> -->
+         </div>
+
+      </div>
+   </div>
+   <div class="modal fade" id="comment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">Agregar Comentario</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="md-form">
+                  <i class="fas fa-pencil-alt prefix"></i>
+                  <textarea id="form10" class="md-textarea form-control" rows="3" ng-model="messages"></textarea>
+                  <label for="form10" class="active">Observacíon:</label>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-primary" ng-click="addComment(messages)">Send message</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="modal fade" id="resolve" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-body">
+               <div class="dates">
+                  <div class="support-buttons">
+                     <a href="#" class="btn btn-primary" ng-click="addStatus('X',ticketNum)">
+                        <i class="far fa-stop-circle"></i>
+                        <strong>On Hold</strong>
+                     </a>
+                     <a href="#" class="btn btn-success" ng-click="addStatus('I',ticketNum)">
+                        <i class="far fa-play-circle"></i>
+                        <strong>In Progress</strong>
+                     </a>
+                     <a href="#" class="btn btn-dark" ng-click="addStatus('C',ticketNum)">
+                        <i class="far fa-check-circle"></i>
+                        <strong>Resolve</strong>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+   <div class="modal fade" id="comments" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <button type="button" class="close closes" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body">
+               <div class="row comment">
+                  <div class="head">
+                     <small><strong class='user'>Diablo25</strong> 30.10.2017 12:13</small>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non lorem elementum, accumsan magna
+                     sed, faucibus mauris. Nulla pellentesque ante nibh, ac hendrerit ante fermentum sed. Nunc in libero
+                     dictum, porta nibh pellentesque, ultrices dolor. Curabitur nunc ipsum, blandit vel aliquam id,
+                     aliquam vel velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                     Curae; Sed sit amet mi dignissim, pretium justo non, lacinia libero. Nulla facilisi. Donec id sem
+                     velit. </p>
+               </div>
+               <div class="row comment">
+                  <div class="head">
+                     <small><strong class='user'>Diablo25</strong> 30.10.2017 12:13</small>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non lorem elementum, accumsan magna
+                     sed, faucibus mauris. Nulla pellentesque ante nibh, ac hendrerit ante fermentum sed. Nunc in libero
+                     dictum, porta nibh pellentesque, ultrices dolor. Curabitur nunc ipsum, blandit vel aliquam id,
+                     aliquam vel velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                     Curae; Sed sit amet mi dignissim, pretium justo non, lacinia libero. Nulla facilisi. Donec id sem
+                     velit. </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--CONTAINER-->
+   <% include ./partials/script %>
+   <script src="./controller/ticketController.js"></script>
+   <script src="./js/ticket.js"></script>
+</body>
+
+</html>

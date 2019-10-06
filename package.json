@@ -1,0 +1,38 @@
+{
+  "name": "Keep",
+  "version": "1.0.0",
+  "description": "software administrativo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sipcorp/keep.git"
+  },
+  "author": "Pofi",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cryptr": "^4.0.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "flash": "^1.1.0",
+    "i": "^0.3.6",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.4",
+    "nodemon": "^1.19.0",
+    "npm": "^6.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}

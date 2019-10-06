@@ -1,0 +1,111 @@
+<!--========== Third Modal ==========-->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content additionalFields">
+         <div class="modal-header keep-modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Agregar Cita</h5>
+            <button type="button" class="close keep-modal-close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">×</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-6" style="border-right: 1px solid #e6e1e1;">
+                     <form class="">
+                        <div class="form-group">
+                           <label for="exampleInputEmail1" class="txt">Nombre</label>
+                           <div class="input-group">
+                              <div class="input-group-prepend">
+                                 <span class="input-group-text">
+                                       <i class="far fa-building"></i>
+                                 </span>
+                              </div>
+                              <input type="text" class="form-control" name="login_email"  pattern=".{4,}" ng-model="bussinesName" 
+                                 title="Cuatro(4) o mas caracteres" required="">
+                           </div>
+                           <label for="exampleInputEmail1" class="txt">Contacto</label>
+                           <div class="input-group">
+                              <div class="input-group-prepend">
+                                 <span class="input-group-text">
+                                       <i class="fas fa-address-book"></i>
+                                 </span>
+                              </div>
+                              <input type="text" class="form-control" name="login_email"  pattern=".{4,}" ng-model="contactName"
+                                 title="Cuatro(4) o mas caracteres" required="">
+                           </div>
+                           <label for="exampleInputEmail1" class="txt">Venta Estimada</label>
+                           <div class="input-group">
+                              <div class="input-group-prepend">
+                                 <span class="input-group-text">
+                                       <i class="fas fa-file-invoice-dollar"></i>
+                                 </span>
+                              </div>
+                              <input type="text" class="form-control" name="login_email"  format="currency" ng-model="saleEstimate"
+                                 title="Cuatro(4) o mas caracteres" required="">
+                           </div>
+                           <label for="exampleInputEmail1" class="txt">Fecha estimada de cierre</label>
+                           <div class="input-group">
+                              <div class="input-group-prepend">
+                                 <span class="input-group-text">
+                                       <i class="far fa-calendar-alt"></i>
+                                    </span>
+                              </div>
+                              <input type="date" class="form-control" name="login_email"  pattern=".{4,}" ng-model="date"
+                                  required="">
+                           </div>
+
+                     </form>
+                  </div>
+               </div>
+               <div class="row ml-1">
+                     <div class="col-12">
+                           <form class="">
+                                 <div class="form-group">
+                                    <label for="exampleInputEmail1" class="txt">Email</label>
+                                    <div class="input-group">
+                                       <div class="input-group-prepend">
+                                          <span class="input-group-text">
+                                                <i class="far fa-envelope"></i>
+                                          </span>
+                                       </div>
+                                       <input type="text" class="form-control" name="login_email"  pattern=".{4,}" ng-model="email"
+                                          title="Cuatro(4) o mas caracteres" required="">
+                                    </div>
+                                    <label for="exampleInputEmail1" class="txt">Telefono</label>
+                                    <div class="input-group">
+                                       <div class="input-group-prepend">
+                                          <span class="input-group-text">
+                                                <i class="fas fa-phone"></i>
+                                          </span>
+                                       </div>
+                                       <input type="text" class="form-control" name="login_email"  pattern=".{4,}" ng-model="phone"
+                                          title="Cuatro(4) o mas caracteres" required="">
+                                    </div>
+                                    <label for="exampleInputEmail1" class="txt">Celular</label>
+                                    <div class="input-group">
+                                       <div class="input-group-prepend">
+                                          <span class="input-group-text">
+                                                <i class="fas fa-mobile-alt"></i>
+                                          </span>
+                                       </div>
+                                       <input type="text" class="form-control" name="login_email"  pattern=".{4,}" ng-model="movile"
+                                          title="Cuatro(4) o mas caracteres" required="">
+                                    </div>
+                                   
+                                    <label for="form_message">Direccion</label>
+                                    <textarea id="form_message" name="message" class="form-control"  rows="2" required data-error="Please,leave us a message." ng-model="address"></textarea>
+                                    <div class="help-block with-errors"></div>
+                              </form>
+                     </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal-footer keep-modal-footer">
+            <button type="button" class="btn btn-success keep-button" ng-click="addTask(bussinesName,contactName,saleEstimate,date,email,phone,movile,address)">Save</button>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- /.modal -->

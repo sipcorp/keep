@@ -1,0 +1,75 @@
+.breadcrumb {
+  padding: 0px;
+  background: #000000;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.breadcrumb li.home a {
+  background: #000000;
+  color: white;
+  padding-left: 15px;
+}
+
+.breadcrumb li.home a:after {
+  border-left: 30px solid #000000;
+}
+
+.breadcrumb li.home a span:before {
+  content: "  ";
+}
+
+.breadcrumb li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0 10px 45px;
+  position: relative;
+  float: left;
+}
+
+.breadcrumb li a:before {
+  content: " ";
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid white;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 1;
+}
+
+.breadcrumb li a:after {
+  content: " ";
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid rgb(0,0,0);
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  z-index: 2;
+}
+
+.breadcrumb li a:hover:after {
+  border-left-color: #0b79b2 !important;
+}
+
+.breadcrumb li.active a {
+  background: #0b79b2;
+  color: white;
+}
+
+.breadcrumb li.active a:after {
+  border-left: 30px solid #0b79b2;
+}
+
+.breadcrumb li a:hover {
+  background: #0b79b2;
+  color: white;
+}
+
+.fas.fa-home {
+  /*float: left;*/
+}
+
