@@ -269,7 +269,7 @@
 
 @media screen and (max-width: 768px) {
   .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 5px;
+    margin: 59px 5px;
   }
 }
 

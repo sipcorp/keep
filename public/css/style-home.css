@@ -1045,6 +1045,9 @@ textarea.form-control {
    //  548 PX (Hawei)   //
 */
 @media (max-width:548px) {
+  .navbar-brand img {
+    width: 62%;
+}
   .stats div {
     width: 126px;
 }
