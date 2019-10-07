@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>prockeep</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="css/Social-Icons.css">
+    <link rel="stylesheet" href="css/style-contac.css">
+</head>
+
+<body class="black" ng-app="startAPP" ng-controller="ticketController">
+<div class="home">
+    <a href="/">
+            <i class="fas fa-home fa-x3"></i> Home
+    </a>
+</div>
+    <!-- Contact Us Section -->
+    <section class="Material-contact-section section-padding section-dark">
+        <div class="container">
+            <div class="row">
+                <!-- Section Titile -->
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="section-title">Tus mejores <strong><i>Aliados</i></strong> </h1>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Section Titile -->
+                <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <p>En prockeep encontraras asesoría personalizada en todo el proceso pre y post de nuestros
+                        servicios, es así que nos convertiremos en tus mejores aliados en la lucha contra la
+                        contaminación de áreas, nuestro principal objetivo es la excelencia en nuestros servicios.</p>
+
+                    <div class="find-widget">
+                        Compañia: <a href="#">prockeep</a>
+                    </div>
+                    <div class="find-widget">
+                        Direccíon: <a href="#">Condado de Rey, Plaza Mi Condado piso 3 Oficina 59</a>
+                    </div>
+                    <div class="find-widget">
+                        Telefono: <a href="#">+507 393-9699</a>
+                    </div>
+
+                    <div class="find-widget">
+                        Website: <a href="#">www.prockeep.com</a>
+                    </div>
+                    <div class="find-widget">
+                        Horario: <a href="#">Lunes a Sabado: 8:00 AM - 5:00 PM</a>
+                    </div>
+                    <div class="logo">
+                        <img src="./img/ProkeepLogo.png" alt="">
+                    </div>
+                </div>
+                <!-- contact form -->
+                <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                    <form class="shake" role="form" method="post" id="contactForm" name="contact-form"
+                        data-toggle="validator">
+                        <!-- Type Service -->
+                        <div class="form-group label-floating" style="display: inline-flex;">
+                            <label class="control-label" for="service">Tipo de Servicio</label>
+                            <form>
+                                <div class="radiobtn">
+                                    <input type="radio" id="huey" name="drone" value="huey" ng-model="E" />
+                                    <label for="huey">Empresarial</label>
+                                </div>
+                            
+                                <div class="radiobtn">
+                                    <input type="radio" id="louie" name="drone" value="louie" ng-model="H"/>
+                                    <label for="louie">Hogar</label>
+                                </div>
+                            
+                            </form>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Name -->
+                        <div class="form-group label-floating">
+                            <label class="control-label" for="name">Nombre</label>
+                            <input class="form-control" id="name" type="text" name="name" required ng-model="name" 
+                                data-error="Please enter your name">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- email -->
+                        <div class="form-group label-floating">
+                            <label class="control-label" for="email">Email</label>
+                            <input class="form-control" id="email" type="email" name="email" required ng-model="email"
+                                data-error="Please enter your Email">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                         <!-- phone -->
+                         <div class="form-group label-floating">
+                                <label class="control-label" for="email">Telefono</label>
+                                <input class="form-control" id="phone" type="phone" name="phone" required ng-model="phone"
+                                    data-error="Please enter your phone">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        <!-- Subject -->
+                        <div class="form-group label-floating">
+                            <label class="control-label">Asunto</label>
+                            <input class="form-control" id="msg_subject" type="text" name="subject" required ng-model="subject"
+                                data-error="Please enter your message subject">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Message -->
+                        <div class="form-group label-floating">
+                            <label for="message" class="control-label">Mensaje</label>
+                            <textarea class="form-control" rows="3" id="message" name="message" required ng-model="message"
+                                data-error="Write your message"></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Form Submit -->
+                        <div class="form-submit mt-5">
+                            <button class="btn btn-common" type="button" id="form-submit" ng-click="addTicket(E,H,name,email,phone,subject,message)">
+                                Enviar Solicitud
+                            </button>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <% include ./partials/script %>
+    <script src="./controller/ticketController.js"></script>
+</body>
+
+</html>
