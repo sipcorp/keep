@@ -764,3 +764,17 @@ form {
   }
   
   
+  /*MEDYA QUERY*/
+
+  @media only screen and (max-width: 548px) {
+  
+    .section-title{
+        display: inline-block;
+        font-size: 27px; 
+    }
+    .logo img {
+        width: 100%;
+        margin-top: 13px;
+        margin-left: 0px;
+    }
+  }
