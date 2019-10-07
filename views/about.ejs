@@ -26,7 +26,7 @@
             <i id="social-fb" class="fab fa-facebook-f"></i>
         </a>
         <a href="#">
-           <i id="social-ig" class="fab fa-instagram"></i>
+            <i id="social-ig" class="fab fa-instagram"></i>
         </a>
         <a href="#">
             <i id="social-yb" class="fab fa-youtube"></i>
@@ -54,14 +54,16 @@
                         class="navbar-toggler-icon"><i class="fas fa-th-list"></i></span></button>
                 <div class="collapse navbar-collapse text-white" id="navcol-1">
                     <ol class="breadcrumb">
-                        <li class="home"><a href="/index"><i class="fas fa-home"></i><span>Home</span></a></li>
-                        <li class="not active"><a href="/about">Nosotros</a></li>
-                        <li><a href="#">Tecnología</a></li>
-                        <li class="servicio"><a href="/servicios">Servicio</a></li>
+                        <li class="home active mb-3"><a href="/index"><i class="fas fa-home"></i><span>Home</span></a>
+                        </li>
+                        <li class="not mb-3"><a href="/about">Nosotros</a></li>
+                        <li class="not"><a href="#">Tecnología</a></li>
+                        <li class="not"><a href="/servicios">Servicio</a></li>
                     </ol>
                     <ul class="nav navbar-nav text-white ml-auto">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link text-white btn btn-sm" href="/contact" style="border-radius: 24px;background: #0b79b2;/*margin-top: -16px;*/">Solicitar
+                            <a class="nav-link text-white btn btn-sm" href="/contact"
+                                style="border-radius: 24px;background: #0b79b2;/*margin-top: -16px;*/">Solicitar
                                 Cita</a></li>
                     </ul>
                 </div>
@@ -77,35 +79,46 @@
                         <h1>Quienes <span>Somos?</span></h1>
                         <!-- <h3>Lorem ipsum dolor sit amet </h3> -->
                         <p class="about-paddingB">
-                                Somos una empresa dedicada a la sanitizacion y desinfección de alto nivel donde nos apegamos a la más alta tecnología de desinfección con estándares de calidad, exigentes y amigables con el ambiente con el fin de prevenir y controlar las infecciones asociadas a zonas críticas y de la atención médica.<br/>
+                            Somos una empresa dedicada a la sanitizacion y desinfección de alto nivel donde nos apegamos
+                            a la más alta tecnología de desinfección con estándares de calidad, exigentes y amigables
+                            con el ambiente con el fin de prevenir y controlar las infecciones asociadas a zonas
+                            críticas y de la atención médica.<br />
 
-                                Nuestras soluciones de, desinfección de alto nivel buscan penetrar en cualquier tipo de superficies, incluyendo grietas y hendiduras, además en nuestros procesos de sanitizacion ayudamos a la eliminación de cualquier materia orgánica en estos lugares de difícil acceso para garantizar la desinfección.<br/>
-                                
-                                Hemos conformado un equipo de trabajo entusiasta y exigente, para lograr el mayor grado de calidad posible en nuestros servicios, donde día a día sacamos lo mejor de nosotros para cumplir con las expectativas de nuestros clientes. Por ello, estamos seguros que somos tu mejor opción.
-                                
-                                Nuestra meta es ofrecer soluciones ecológicas de limpieza y sanitización, buscando siempre la economía en la operación y un desarrollo sustentable en todos los proyectos en los que participamos.  
+                            Nuestras soluciones de, desinfección de alto nivel buscan penetrar en cualquier tipo de
+                            superficies, incluyendo grietas y hendiduras, además en nuestros procesos de sanitizacion
+                            ayudamos a la eliminación de cualquier materia orgánica en estos lugares de difícil acceso
+                            para garantizar la desinfección.<br />
+
+                            Hemos conformado un equipo de trabajo entusiasta y exigente, para lograr el mayor grado de
+                            calidad posible en nuestros servicios, donde día a día sacamos lo mejor de nosotros para
+                            cumplir con las expectativas de nuestros clientes. Por ello, estamos seguros que somos tu
+                            mejor opción.
+
+                            Nuestra meta es ofrecer soluciones ecológicas de limpieza y sanitización, buscando siempre
+                            la economía en la operación y un desarrollo sustentable en todos los proyectos en los que
+                            participamos.
                         </p>
                         <div class="about-icons">
                             <ul>
                                 <li>
                                     <a href="#">
                                         <i id="social-fb" class="fa fa-facebook-square fa-3x social"></i>
-                                    </a> 
+                                    </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <i id="social-tw" class="fa fa-twitter-square fa-3x social"></i>
-                                    </a> 
+                                    </a>
                                 </li>
-                                <li> 
+                                <li>
                                     <a href="#">
                                         <i id="social-ig" class="fab fa-instagram fa-3x social"></i>
-                                    </a> 
-                                </li> 
-                                <li> 
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="#">
                                         <i id="social-yb" class="fab fa-youtube fa-3x social"></i>
-                                    </a> 
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -149,8 +162,7 @@
             </div>
         </footer>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <% include ./partials/script %>
 </body>
 
 </html>
