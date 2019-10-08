@@ -113,75 +113,75 @@
                </div>
                <div class="tab-pane fade in active" id="tab2">
                   <div class="row row-d">
-                     <div class="col-12 col-md-4 mb-2" ng-repeat="info in ticketOwner track by $index">
-                        <div class="card card-1">
-                           <header class="card-header mb-0"
-                              ng-class="{'card-type-h': info.typeService === 'H' , 'card-type-e': info.typeService === 'E'} ">
-                              <a data-toggle="collapse" data-target="#{{info.ticketNum}}" aria-expanded="true" class="">
-                                 <i class="icon-action fa fa-chevron-down"></i>
-                                 <span class="title">{{info.name}}</span>
-                                 <span class="float-right"
-                                    style="margin-right: 10px;">{{info.lastUpdate  | date:'dd/MM/yyyy' }}</span>
-                              </a>
-                           </header>
-                           <div class="collapse" id="{{info.ticketNum}}">
-                              <!-- card-body -->
-                              <div class="card-body ch-ck">
-                                 <div class="subject">
-                                    <span class="subject-1">Asunto</span>
-                                    <label for="success" class="btn btn-sm btn-success lebel-box" ng-if="info.status === 'I' ">In progress
-                                       <input type="checkbox" id="success" class="badgebox" checked disabled>
-                                       <span class="badge">&check;</span>
-                                    </label>
-                                    <p class="place-of-interest">
-                                       {{info.subject}}
-                                    </p>
-                                    <p class="message">
-                                      {{info.message}}
-                                    </p>
-                                 </div>
-                                 <div class="infoTicket">
-                                    <div class="attractions-wrapper">
-                                       <div class="attractions-row">
-                                          <div class="attractions-tile phone"></div>
-                                          <div class="attractions-details">
-                                             <div>{{info.phone}}</div>
-                                          </div>
+                        <div class="col-12 col-md-4 mb-2" ng-repeat="info in ticketOwner track by $index">
+                              <div class="card card-1">
+                                 <header class="card-header mb-0"
+                                    ng-class="{'card-type-h': info.typeService === 'H' , 'card-type-e': info.typeService === 'E'} ">
+                                    <a data-toggle="collapse" data-target="#id{{info.ticketNum}}" aria-expanded="true" class="">
+                                       <i class="icon-action fa fa-chevron-down"></i>
+                                       <span class="title">{{info.name}}</span>
+                                       <span class="float-right"
+                                          style="margin-right: 10px;">{{info.lastUpdate  | date:'dd/MM/yyyy' }}</span>
+                                    </a>
+                                 </header>
+                                 <div class="collapse" id="id{{info.ticketNum}}">
+                                    <!-- card-body -->
+                                    <div class="card-body ch-ck">
+                                       <div class="subject">
+                                          <span class="subject-1">Asunto</span>
+                                          <label for="success" class="btn btn-sm btn-success lebel-box" ng-if="info.status === 'I' ">In progress
+                                             <input type="checkbox" id="success" class="badgebox" checked disabled>
+                                             <span class="badge">&check;</span>
+                                          </label>
+                                          <p class="place-of-interest">
+                                             {{info.subject}}
+                                          </p>
+                                          <p class="message">
+                                            {{info.message}}
+                                          </p>
                                        </div>
-                                       <div class="attractions-row">
-                                          <div class="attractions-tile email"></div>
-                                          <div class="attractions-details">
-                                             <div>{{info.email}}</div>
-                                          </div>
-                                       </div>
-                                       <div class="attractions-row" ng-if="totalComents > 0">
-                                          <div class="attractions-tile dialog"></div>
-                                          <div class="attractions-details dialog" data-toggle="modal"
-                                             data-target="#comments" data-whatever="@mdo">
-                                             <div>Comentarios {{totalComents}}</div>
+                                       <div class="infoTicket">
+                                          <div class="attractions-wrapper">
+                                             <div class="attractions-row">
+                                                <div class="attractions-tile phone"></div>
+                                                <div class="attractions-details">
+                                                   <div>{{info.phone}}</div>
+                                                </div>
+                                             </div>
+                                             <div class="attractions-row">
+                                                <div class="attractions-tile email"></div>
+                                                <div class="attractions-details">
+                                                   <div>{{info.email}}</div>
+                                                </div>
+                                             </div>
+                                             <div class="attractions-row" ng-if="totalComents > 0">
+                                                <div class="attractions-tile dialog"></div>
+                                                <div class="attractions-details dialog" data-toggle="modal"
+                                                   data-target="#comments" data-whatever="@mdo">
+                                                   <div>Comentarios {{totalComents}}</div>
+                                                </div>
+                                             </div>
                                           </div>
                                        </div>
                                     </div>
-                                 </div>
+                                    <!-- card-body.// -->
+                                    <!-- card-footer -->
+                                    <div class="card-footer">
+                                       <div class="stats">
+                                          <div data-toggle="modal" data-target="#comment" data-whatever="@mdo">
+                                             <strong> Add Comment</strong>
+      
+                                          </div>
+      
+                                          <div data-toggle="modal" data-target="#resolve" data-whatever="@mdo" ng-click="addTicketNum(info.ticketNum)">
+                                             <strong>Resolve</strong>
+      
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div> <!-- collapse .// -->
                               </div>
-                              <!-- card-body.// -->
-                              <!-- card-footer -->
-                              <div class="card-footer">
-                                 <div class="stats">
-                                    <div data-toggle="modal" data-target="#comment" data-whatever="@mdo">
-                                       <strong> Add Comment</strong>
-
-                                    </div>
-
-                                    <div data-toggle="modal" data-target="#resolve" data-whatever="@mdo" ng-click="addTicketNum(info.ticketNum)">
-                                       <strong>Resolve</strong>
-
-                                    </div>
-                                 </div>
-                              </div>
-                           </div> <!-- collapse .// -->
-                        </div>
-                     </div>
+                           </div>
                   </div>
                </div>
             </div>
@@ -275,6 +275,7 @@
          </div>
       </div>
    </div>
+   
    <!--CONTAINER-->
    <% include ./partials/script %>
    <script src="./controller/ticketController.js"></script>
