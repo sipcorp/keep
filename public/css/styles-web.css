@@ -147,6 +147,34 @@ a:hover {
   background: -webkit-linear-gradient(left, #0b79b2 30%, #000000 30%);
   background: linear-gradient(45deg, #000000 30%,#0b79b2 30%);
 }
+.paddingTB60 {
+  padding: 20px 0px 60px 0px !important;
+}
+.h1-movile{
+  display: inline-flex;
+}
+.about-title h1 {
+  font-size: 35px !important;
+}
+.about-title span {
+  font-size: 35px !important;
+  margin-left: 6px !important;
+}
+.compuesto::after {
+ display: none;
+}
+.st-img {
+ display: none;
+}
+.gs-img {
+  display: none;
+}
+#tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4, #tab5:checked ~ #content5 {
+  padding: 11px !important;
+}
+.h3-movile{
+  font-size: 22px;
+}
 }
 .button-movile {
   float: right;
