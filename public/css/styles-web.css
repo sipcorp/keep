@@ -120,6 +120,10 @@ a:hover {
   border-radius: 4px;
   margin-right: 20px;
 }
+.breadcrumb li.active a {
+  background: #0b79b2 !important;
+  color: white !important;
+}
 .breadcrumb li.not  a {
   color: #000000;
   text-decoration: none;
