@@ -97,7 +97,7 @@ app.controller('ticketController', ['$scope', '$timeout', '$interval', "$http", 
     //***********************************//
     //****** ADD VAR TICKETNUM *********//
     //*********************************//
-    $scope.addTicketNum = function(e){
+    $scope.addTicketNum = function (e) {
         $scope.ticketNum = e
     }
 
@@ -107,40 +107,90 @@ app.controller('ticketController', ['$scope', '$timeout', '$interval', "$http", 
     $scope.addTicket = function (E, H, name, email, phone, subject, message) {
         var date = currentDate(2, 1)
         var type = ""
-        if (E === "huey") {
-            type = "E"
-        }
-        if (H === "louie") {
-            type = "H"
-        }
-        var obj = {
-            ticketNum: Math.random().toString(36).substr(2, 8),
-            type: type,
-            name: name,
-            email: email,
-            phone: phone,
-            subject: subject,
-            message: message,
-            lastUpdate: date
+        if ((E === undefined && H === undefined) || (name === undefined || name === "") || (email === undefined || email === "") ||
+            (phone === undefined || phone === "") || (subject === undefined || subject === "") || (message === undefined || message === "")) {
+
+            // Validation Form
+
+            // Type Service Field
+            if (E === undefined && H === undefined) {
+                $('#1').addClass("error-active").fadeOut(2000, function () {
+                    $('#1').removeClass("error-active")
+                })
+                return false;
+            }
+            // Name Field
+            if (name === undefined || name === "") {
+                $('#2').addClass("error-active").fadeOut(2000, function () {
+                    $('#2').removeClass("error-active")
+                })
+                return false;
+            }
+            // Email Field
+            if (email === undefined || email === "") {
+                $('#3').addClass("error-active").fadeOut(2000, function () {
+                    $('#3').removeClass("error-active")
+                })
+                return false;
+            }
+            // Phone Field
+            if (phone === undefined || phone === "") {
+                $('#4').addClass("error-active").fadeOut(2000, function () {
+                    $('#4').removeClass("error-active")
+                })
+                return false;
+            }
+            // Subject Field
+            if (subject === undefined || subject === "") {
+                $('#5').addClass("error-active").fadeOut(2000, function () {
+                    $('#5').removeClass("error-active")
+                })
+                return false;
+            }
+            // Message Field
+            if (message === undefined || message === "") {
+                $('#6').addClass("error-active").fadeOut(2000, function () {
+                    $('#6').removeClass("error-active")
+                })
+                return false;
+            }
+        } else {
+            if (E === "huey") {
+                type = "E"
+            }
+            if (H === "louie") {
+                type = "H"
+            }
+            var obj = {
+                ticketNum: Math.random().toString(36).substr(2, 8),
+                type: type,
+                name: name,
+                email: email,
+                phone: phone,
+                subject: subject,
+                message: message,
+                lastUpdate: date
+            }
+
+            obj = JSON.stringify(obj);
+            console.log(date)
+            $.ajax({
+                url: addTicket,
+                headers: headerAjax,
+                method: 'POST',
+                dataType: 'json',
+                data: obj,
+                success: function (data) {
+                    alertify.set('notifier', 'position', 'top-right');
+                    alertify.success('Prospecto creado correctamente');
+                    window.location.reload();
+                },
+                error: function (textStatus, err) {
+                    alert("text status " + textStatus + ", err " + err);
+                }
+            });
         }
 
-        obj = JSON.stringify(obj);
-        console.log(date)
-        $.ajax({
-            url: addTicket,
-            headers: headerAjax,
-            method: 'POST',
-            dataType: 'json',
-            data: obj,
-            success: function (data) {
-                alertify.set('notifier', 'position', 'top-right');
-                alertify.success('Prospecto creado correctamente');
-                window.location.reload();
-            },
-            error: function (textStatus, err) {
-                alert("text status " + textStatus + ", err " + err);
-            }
-        });
 
     }
 
@@ -183,10 +233,10 @@ app.controller('ticketController', ['$scope', '$timeout', '$interval', "$http", 
     //***********************************//
     //*********** ADD STATUS ***********//
     //*********************************//
-    $scope.addStatus = function (e,ticketNum) {
+    $scope.addStatus = function (e, ticketNum) {
         var obj = {
             status: e,
-            ticketNum:ticketNum
+            ticketNum: ticketNum
         }
         obj = JSON.stringify(obj);
         $.ajax({
