@@ -1,28 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>prockeep</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="fonts/ionicons.min.css">
-    <link rel="stylesheet" href="fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="css/-product-features.css">
-    <link rel="stylesheet" href="css/Bold-BS4-Cards-with-Hover-Effect-74-1.css">
-    <link rel="stylesheet" href="css/Bold-BS4-Cards-with-Hover-Effect-74.css">
-    <link rel="stylesheet" href="css/Footer-Dark.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
-    <link rel="stylesheet" href="css/NewsHeaher-1.css">
-    <link rel="stylesheet" href="css/NewsHeaher.css">
-    <link rel="stylesheet" href="css/Nice-breadcrumb.css">
-    <link rel="stylesheet" href="css/Social-Icons.css">
-    <link rel="stylesheet" href="css/styles-web.css">
-    <link rel="stylesheet" href="css/Swiper-Slider-Card-For-Blog-Or-Product-1.css">
-</head>
+<% include ./partials/head %>
 
 <body class="easy">
     <div class="social-icons mx-liner">
@@ -38,7 +17,7 @@
         <a href="#">
             <i id="social-yb" class="fab fa-youtube"></i>
         </a>
-        <div style="display: inline-block;">
+        <div style="display: none;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -63,15 +42,15 @@
                     <ul class="breadcrumb">
                         <li class="home active"><a href="/"><i class="fas fa-home"></i><span>Home</span></a></li>
                         <li class="not"><a href="/about">Nosotros</a></li>
-                        <li class="not"><a href="#">Tecnología</a></li>
+                        <li class="not"><a href="/tecno">Tecnología</a></li>
                         <li class="not"><a href="/servicios">Servicio</a></li>
                     </ul>
-                    <ul class="nav navbar-nav text-white ml-auto">
+                    <!-- <ul class="nav navbar-nav text-white ml-auto">
                         <li class="nav-item" role="presentation">
                             <a class="nav-link text-white btn btn-sm" href="/contact"
                                 style="border-radius: 24px;background: #0b79b2;/*margin-top: -16px;*/">Solicitar
                                 Cita</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </nav>
@@ -86,7 +65,8 @@
                     <div class="blog-slider__text">somos pioneros en la utilización de tecnología revolucionaría en la
                         desinfección de areas, lo que nos permite obtener la mejor relación calidad precio en el
                         mercado. Sin duda una experiencia que marcará un antes y un después en los servicios de
-                        desinfección. </div><a class="blog-slider__button" href="#">READ MORE</a>
+                        desinfección. </div>
+                    <!-- <a class="blog-slider__button" href="/contact">Solicitar cita</a> -->
                 </div>
             </div>
             <div class="blog-slider__item swiper-slide">
@@ -96,8 +76,9 @@
                     <div class="blog-slider__title">PROTEGEMOS TU SALUD Y LA DE LOS TUYOS</div>
                     <div class="blog-slider__text">Utilizando tecnología innovadora de desinfección de alto nivel por
                         vía aérea con peróxido de hidrógeno, erradicamos hongos,bacterias y virus de su hogar ayudando
-                        así a mantener un ambiente mas puro para sus seres queridos </div><a class="blog-slider__button"
-                        href="#">Solicitar prueba</a>
+                        así a mantener un ambiente mas puro para sus seres queridos </div>
+                    <!-- <a class="blog-slider__button"
+                        href="/contact">Solicitar prueba</a> -->
                 </div>
             </div>
             <div class="blog-slider__pagination"></div>
@@ -139,13 +120,13 @@
                     <div class="boxContent">
                         <div class="row">
                             <div class="col-md-12">
-                                <p class="description">
+                                <a href="/servicios" class="description">
                                     En lugar de adoptar un enfoque de "talla única", implementamos la gama
                                     más amplia de tecnologías de la industria, como lo es vapor de peróxido de hidrógeno
                                     (HPV).
                                     Nuestros servicios de desinfección generalmente brindan un nivel
                                     de garantía de esterilidad log3 a log5 (99.9% -99.999%)...
-                                </p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -159,12 +140,12 @@
                     <div class="boxContent">
                         <div class="row">
                             <div class="col-md-12">
-                                <p class="description">
+                                <a href="/servicios" class="description">
                                     Las consecuencias para las empresas e instituciones que
                                     experimentan
                                     contaminación biológica en industrias de regulación leve a moderada pueden ser tan
                                     importantes como las que operan en industrias altamente reguladas...
-                                </p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -176,9 +157,10 @@
                         <h4 class="title">Gestor de Procesos</h4>
                     </div>
                     <div class="boxContent">
-                        <p class="description">La incorporación de las nuevas tecnologías de la información ha permitido
+                        <a href="/servicios" class="description">La incorporación de las nuevas tecnologías de la información ha permitido
                             dar una redefinición a los procesos alcanzando grados de eficacia y eficiencia
-                            inimaginables. Utilizando BPM (Business Process Management)...</p>
+                            inimaginables. Utilizando BPM (Business Process Management)...
+                        </a>
 
                     </div>
                 </div>
@@ -187,51 +169,7 @@
     </div>
     <div class="hr-style mb-4"></div>
     <div class="container">
-        <h1>Nuestros Colaboradores</h1>
-        <p>Estamos conformados por un personal altamente calificado que cuenta con la experiencia, herramientas y
-            entrenamiento necesario que garantiza la calidad de nuestro servicio
-            <i>"para ser los mejores contamos con los mejores"</i>.</p>
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="my-4">Profecionales</h2>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
-                    src="http://placehold.it/200x200">
-                <h3 class="m-0">John Smith</h3>
-                <h5 class="my-1">Job Title</h5>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
-                    src="http://placehold.it/200x200">
-                <h3 class="m-0">John Doe</h3>
-                <h5 class="my-1">Job Title</h5>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
-                    src="http://placehold.it/200x200">
-                <h3 class="m-0">Jane Doe</h3>
-                <h5 class="my-1">Job Title</h5>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
-                    src="http://placehold.it/200x200">
-                <h3 class="m-0">John Joe</h3>
-                <h5 class="my-1">Job Title</h5>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
-                    src="http://placehold.it/200x200">
-                <h3 class="m-0">Jane Joe</h3>
-                <h5 class="my-1">Job Title</h5>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
-                    src="http://placehold.it/200x200">
-                <h3 class="m-0">Joe Doe</h3>
-                <h5 class="my-1">Job Title</h5>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
-        </div>
+
     </div>
     <div class="footer-dark">
         <footer>

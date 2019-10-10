@@ -1,25 +1,16 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>prockeep</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="css/Social-Icons.css">
-    <link rel="stylesheet" href="css/style-contac.css">
-</head>
+<% include ./partials/script %>
+<link rel="stylesheet" href="css/style-contac.css">
+
 
 <body class="black" ng-app="startAPP" ng-controller="ticketController">
-<div class="home">
-    <a href="/">
+    <div class="home">
+        <a href="/">
             <i class="fas fa-home fa-x3"></i> Home
-    </a>
-</div>
+        </a>
+    </div>
     <!-- Contact Us Section -->
     <section class="Material-contact-section section-padding section-dark">
         <div class="container">
@@ -58,8 +49,7 @@
                 </div>
                 <!-- contact form -->
                 <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
-                    <form class="shake"  name="contact-form"
-                        data-toggle="validator">
+                    <form class="shake" name="contact-form" data-toggle="validator">
                         <!-- Type Service -->
                         <div class="form-group label-floating" style="display: inline-flex;">
                             <label class="control-label" for="service">Tipo de Servicio</label>
@@ -68,19 +58,19 @@
                                     <input type="radio" id="huey" name="drone" value="huey" ng-model="E" />
                                     <label for="huey">Empresarial</label>
                                 </div>
-                            
+
                                 <div class="radiobtn">
-                                    <input type="radio" id="louie" name="drone" value="louie" ng-model="H"/>
+                                    <input type="radio" id="louie" name="drone" value="louie" ng-model="H" />
                                     <label for="louie">Hogar</label>
                                 </div>
-                            
+
                             </form>
                             <div class="help-block invalid-tooltip" id="1"></div>
                         </div>
                         <!-- Name -->
                         <div class="form-group label-floating">
                             <label class="control-label" for="name">Nombre</label>
-                            <input class="form-control" id="name" type="text" name="name" required ng-model="name" 
+                            <input class="form-control" id="name" type="text" name="name" required ng-model="name"
                                 data-error="Please enter your name">
                             <div class="help-block invalid-tooltip" id="2"></div>
                         </div>
@@ -91,30 +81,31 @@
                                 data-error="Please enter your Email">
                             <div class="help-block invalid-tooltip" id="3"></div>
                         </div>
-                         <!-- phone -->
-                         <div class="form-group label-floating">
-                                <label class="control-label" for="email">Telefono</label>
-                                <input class="form-control" id="phone" type="phone" name="phone" required ng-model="phone"
-                                    data-error="Please enter your phone">
-                                <div class="help-block invalid-tooltip" id="4"></div>
-                            </div>
+                        <!-- phone -->
+                        <div class="form-group label-floating">
+                            <label class="control-label" for="email">Telefono</label>
+                            <input class="form-control" id="phone" type="phone" name="phone" required ng-model="phone"
+                                data-error="Please enter your phone">
+                            <div class="help-block invalid-tooltip" id="4"></div>
+                        </div>
                         <!-- Subject -->
                         <div class="form-group label-floating">
                             <label class="control-label">Asunto</label>
-                            <input class="form-control" id="msg_subject" type="text" name="subject" required ng-model="subject"
-                                data-error="Please enter your message subject">
+                            <input class="form-control" id="msg_subject" type="text" name="subject" required
+                                ng-model="subject" data-error="Please enter your message subject">
                             <div class="help-block invalid-tooltip" id="5"></div>
                         </div>
                         <!-- Message -->
                         <div class="form-group label-floating">
                             <label for="message" class="control-label">Mensaje</label>
-                            <textarea class="form-control" rows="3" id="message" name="message" required ng-model="message"
-                                data-error="Write your message"></textarea>
+                            <textarea class="form-control" rows="3" id="message" name="message" required
+                                ng-model="message" data-error="Write your message"></textarea>
                             <div class="help-block invalid-tooltip" id="6"></div>
                         </div>
                         <!-- Form Submit -->
                         <div class="form-submit mt-5">
-                            <button class="btn btn-common" type="button" id="form-submit" ng-click="addTicket(E,H,name,email,phone,subject,message)">
+                            <button class="btn btn-common" type="button" id="form-submit"
+                                ng-click="addTicket(E,H,name,email,phone,subject,message)">
                                 Enviar Solicitud
                             </button>
                             <div id="msgSubmit" class="h3 text-center hidden"></div>

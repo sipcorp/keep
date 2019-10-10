@@ -68,6 +68,12 @@ module.exports = (app, passport, LocalStrategy) => {
       name: req.userCode
     });
   });
+  app.get('/tecno',  (req, res, next) => {
+    res.render('tecno.ejs', {
+      titulo: "tecnologia",
+      name: req.userCode
+    });
+  });
   app.get('/member',  (req, res, next) => {
     res.render('member.ejs', {
       titulo: "Keep Dashboard",
