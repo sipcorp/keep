@@ -2,6 +2,51 @@
   --content: #000000;
   --tittleSub:#0b79b2;
 }
+/*SOCIOS SLIDR*/
+.slider-text{
+  font-family: 'Open Sans';
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 3px;
+  margin: 30px auto;
+  padding-left: 40px;
+}
+.slider-text::after{
+  border-top: 5px #0b79b2;
+  border-top-style: ridge;
+  content: "";
+  position: absolute;
+  width: 36%;
+  left: 136px;
+  bottom: -313px;
+  }
+.how-section1{
+  margin-top:-15%;
+  padding: 10%;
+}
+.how-section1 h4{
+  color: #ffa500;
+  font-weight: bold;
+  font-size: 30px;
+}
+.how-section1 .subheading{
+  color: #3931af;
+  font-size: 20px;
+}
+.how-section1 .row
+{
+  margin-top: 10%;
+}
+.how-img 
+{
+  text-align: center;
+}
+.how-img img{
+  width: 95%;
+}
+
+
 
 .site-preheader {
   background: #000000;
@@ -84,6 +129,19 @@ a:hover {
   }
 }
 @media only screen and (max-width: 548px) {
+  .slider-text::after {
+   display: none;
+  }
+  .slider-text {
+    text-align: center;
+}
+  .how-img img {
+    width: 100% !important;
+    margin-bottom: 23px;
+}
+  .hr-style {
+    margin-left: 29px !important;
+}
   .img-movile {
     width: 79%;
     position: relative;
