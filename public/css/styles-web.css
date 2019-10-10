@@ -13,14 +13,48 @@
   padding-left: 40px;
 }
 .slider-text::after{
-  border-top: 5px #0b79b2;
-  border-top-style: ridge;
-  content: "";
-  position: absolute;
-  width: 36%;
-  left: 136px;
-  bottom: -313px;
+ 
+}
+.carita {
+  height: 0px;
+  width: 200px;
+  margin: 2% auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: linear-gradient(top, hsla(0,0%,100%,.2) 1px, hsla(0,0%,100%, 0) 1px, hsla(0,0%,0%, .1) 100% );
+  animation: animacion 1s infinite ease-in-out alternate;
+  top:50px;
+  left:15px;
+}
+
+@keyframes animacion {
+	100% {
+    transform: translateY(30px);
+    box-shadow: 0 40px 10px -18px hsla(0,0%,0%,.2),
   }
+}
+
+
+.texto{
+  color:white;
+  font-size:30px;
+  margin: 2% auto;
+  text-align:center;
+  font-family: 'pacifico', sans-serif;
+  text-shadow: 1px 2px 1px rgba(0,0,0,.4); /* Sombrita */
+}
+
+.h1{
+  font-family: 'Open Sans', cursive;
+  font-size: 4em;
+  text-align: center;
+  color: hsl(200, 88%, 37%);
+  margin: 2% auto;
+  text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+}
+
 .how-section1{
   margin-top:-15%;
   padding: 10%;
@@ -79,7 +113,7 @@
   font-weight: 700;
 }
 .hr-style{
-  width: 83%;
+  width: 94%;
     margin-left: 44px;
     margin-top: 26px;
     height: 1px;
@@ -122,18 +156,18 @@ a:hover {
   .social-icons i {
     margin: 0px 2px;
   }
-  .img-movile {
-    width: 79%;
-    position: relative;
-    top: 10px;
-  }
+  
 }
 @media only screen and (max-width: 548px) {
+  .h1{
+    font-size: 37px;
+  }
   .slider-text::after {
    display: none;
   }
   .slider-text {
     text-align: center;
+    padding-left: 0px !important;
 }
   .how-img img {
     width: 100% !important;
@@ -141,6 +175,7 @@ a:hover {
 }
   .hr-style {
     margin-left: 29px !important;
+    width: 83% !important;
 }
   .img-movile {
     width: 79%;
