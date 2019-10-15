@@ -12,7 +12,7 @@ module.exports = (app, passport, LocalStrategy) => {
 
   app.get("/", (req, res) => {
     res.render("index", {
-      titulo: "SIP-Login",
+      titulo: "home",
       message: req.flash("signinMessage")
     });
   });
