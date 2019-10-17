@@ -1615,6 +1615,13 @@ a:hover {
   
 }
 @media only screen and (max-width: 548px) {
+  .badge-movile{
+    font-size: 18px;
+    margin-bottom: 11px;
+  }
+  .box .title {
+    font-size: 13px !important;
+}
     .movile-nav{
         display: block !important;
     }

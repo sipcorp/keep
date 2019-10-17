@@ -3,6 +3,7 @@
   background: #000000;
   overflow: hidden;
   margin: 2rem 0;
+  width: 80%;
 }
 
 .breadcrumb li.home a {
