@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<% include ./partials/head %>
+
+<!------ Include the above in your HEAD tag ---------->
+<link rel="stylesheet" href="css/calculator.css">
+
+<body class="black" ng-app="startAPP" ng-controller="calculatorController">
+    <% include ./partials/header %>
+
+    <!--MAIN CONTENT-->
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="form-horizontal form-pricing">
+                                <div class="price-slider">
+                                    <h4 class="great">Metros</h4>
+                                    <small><span>El calculo minimo es basado en un area de 4 x 4</span></small>
+                                    <div class="col-sm-12">
+                                        <div>
+                                            <input type="text" name="" id="" class="form-control" ng-model="metro">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-slider">
+                                    <h4 class="great">Servicio</h4> <br />
+                                    <div class="d-flex justify-content-center">
+                                        <div class="btn-group btn-group-toggle w-100 " data-toggle="buttons">
+                                            <label class="btn btn-secondary" ng-click="calculate(1,metro)">
+                                                <input type="radio">
+                                                One Shot
+                                            </label>
+                                            <label class="btn btn-secondary" ng-click="calculate(2,metro)">
+                                                <input type="radio" name="options" id="option2" autocomplete="off">
+                                                Preventivo
+                                            </label>
+                                            <label class="btn btn-secondary" ng-click="calculate(3,metro)">
+                                                <input type="radio" name="options" id="option3" autocomplete="off">
+                                                Anual
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="help-info" ng-show="isActive">{{message}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--PREVENTIVO-->
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body content-style">
+                        <div class="row" ng-show="isPrev">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="amount_amirol" class="control-label">Primera erogación ($):
+                                            </label>
+                                            <!-- <span class="help-text">Amount that you need to pay</span> -->
+                                        </div>
+                                        <div class="col-sm-6 mb-2">
+                                            <input type="hidden" id="amount_amirol" class="form-control">
+                                            <!-- <p class="price lead" id="total"></p> -->
+                                            <input class="price lead" name="totalprice" type="text" id="total"
+                                                value="{{one | currency}}" disabled="disabled" style="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="amount_amirol" class="control-label"> Segunda erogación ($):
+                                            </label>
+                                            <!-- <span class="help-text">Amount that you need to pay</span> -->
+                                        </div>
+                                        <div class="col-sm-6 mb-2">
+                                            <input type="hidden" id="amount_amirol" class="form-control">
+                                            <!-- <p class="price lead" id="total12"></p> -->
+                                            <input class="price lead" name="totalprice12" type="text" id="total12"
+                                                value="{{segund | currency}}" disabled="disabled" style="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="amount_amirol" class="control-label"> Erogación preventiva ($):
+                                            </label>
+                                            <!-- <span class="help-text">Amount that you need to pay</span> -->
+                                        </div>
+                                        <div class="col-sm-6 mb-2">
+                                            <input type="hidden" id="amount_amirol" class="form-control">
+                                            <!-- <p class="price lead" id="total52"></p> -->
+                                            <input class="price lead" name="totalprice52" type="text" id="total52"
+                                                value="{{prevention | currency}}" disabled="disabled" style="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-top:30px"></div>
+                                <hr class="style">
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <img src="img/payment.png" class="img-responsive payment" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row" ng-show="isOneShot">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="amount_amirol" class="control-label">Servicio One Shot ($):
+                                            </label>
+                                            <!-- <span class="help-text">Amount that you need to pay</span> -->
+                                        </div>
+                                        <div class="col-sm-6 mb-2">
+                                            <input type="hidden" id="amount_amirol" class="form-control">
+                                            <!-- <p class="price lead" id="total"></p> -->
+                                            <input class="price lead" name="totalprice" type="text" id="total"
+                                                value="{{shot | currency}}" disabled="disabled" style="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top:30px"></div>
+                                <hr class="style">
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <img src="img/payment.png" class="img-responsive payment" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row" ng-show="isYear">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="amount_amirol" class="control-label">Servicio Anual ($):
+                                            </label>
+                                            <!-- <span class="help-text">Amount that you need to pay</span> -->
+                                        </div>
+                                        <div class="col-sm-6 mb-2">
+                                            <input type="hidden" id="amount_amirol" class="form-control">
+                                            <!-- <p class="price lead" id="total"></p> -->
+                                            <input class="price lead" name="totalprice" type="text" id="total"
+                                                value="{{year | currency}}" disabled="disabled" style="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="amount_amirol" class="control-label"> Mensualidad ($):
+                                            </label>
+                                            <!-- <span class="help-text">Amount that you need to pay</span> -->
+                                        </div>
+                                        <div class="col-sm-6 mb-2">
+                                            <input type="hidden" id="amount_amirol" class="form-control">
+                                            <!-- <p class="price lead" id="total12"></p> -->
+                                            <input class="price lead" name="totalprice12" type="text" id="total12"
+                                                value="{{month | currency}}" disabled="disabled" style="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-top:30px"></div>
+                                <hr class="style">
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <img src="img/payment.png" class="img-responsive payment" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MAIN CONTENT-->
+
+    <% include ./partials/script %>
+
+    <script src="./controller/calculator.js"></script>
+</body>
+
+</html>

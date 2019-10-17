@@ -80,6 +80,12 @@ module.exports = (app, passport, LocalStrategy) => {
       name: req.userCode
     });
   });
+  app.get('/calculator',  (req, res, next) => {
+    res.render('calculator.ejs', {
+      titulo: "Calculadora",
+      name: req.userCode
+    });
+  });
   /*
 #######################################################
                  CLOSE SESSION
