@@ -86,6 +86,36 @@ module.exports = (app, passport, LocalStrategy) => {
       name: req.userCode
     });
   });
+  app.get('/blog',  (req, res, next) => {
+    res.render('blog.ejs', {
+      titulo: "Blog",
+      name: req.userCode
+    });
+  });
+  app.get('/post',  (req, res, next) => {
+    res.render('single-post.ejs', {
+      titulo: "Post",
+      name: req.userCode
+    });
+  });
+  app.get('/keep',  (req, res, next) => {
+    res.render('keep.ejs', {
+      titulo: "Post",
+      name: req.userCode
+    });
+  });
+  app.get('/add-article',  (req, res, next) => {
+    res.render('blogAdd.ejs', {
+      titulo: "Post",
+      name: req.userCode
+    });
+  });
+  app.get('/validate',  (req, res, next) => {
+    res.render('validate.ejs', {
+      titulo: "Validaciones",
+      name: req.userCode
+    });
+  });
   /*
 #######################################################
                  CLOSE SESSION

@@ -20,10 +20,10 @@
                             <div class="form-horizontal form-pricing">
                                 <div class="price-slider">
                                     <h4 class="great">Metros</h4>
-                                    <small><span>El calculo minimo es basado en un area de 4 x 4</span></small>
+                                    <small><span>El calculo minimo es basado en un area de 20 metros</span></small>
                                     <div class="col-sm-12">
                                         <div>
-                                            <input type="text" name="" id="" class="form-control" ng-model="metro">
+                                            <input type="text" name="" id="" class="form-control" ng-model="metro" ng-blur="recalculate(metro)">
                                         </div>
                                     </div>
                                 </div>
@@ -54,16 +54,17 @@
                     </div>
                 </div>
             </div>
-            <!--PREVENTIVO-->
+            
             <div class="col-md-6 mb-3">
                 <div class="card">
                     <div class="card-body content-style">
+                        <!--PREVENTIVO-->
                         <div class="row" ng-show="isPrev">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <label for="amount_amirol" class="control-label">Primera erogación ($):
+                                            <label for="amount_amirol" class="control-label">Primera servicio ($):
                                             </label>
                                             <!-- <span class="help-text">Amount that you need to pay</span> -->
                                         </div>
@@ -78,7 +79,8 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <label for="amount_amirol" class="control-label"> Segunda erogación ($):
+                                            <label for="amount_amirol" class="control-label"> Segunda servicio ($): <br/>
+                                                <small>se realiza 21 despues del primer servicio</small>
                                             </label>
                                             <!-- <span class="help-text">Amount that you need to pay</span> -->
                                         </div>
@@ -93,7 +95,8 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <label for="amount_amirol" class="control-label"> Erogación preventiva ($):
+                                            <label for="amount_amirol" class="control-label"> Servicio preventiva ($): <br/>
+                                                <small>se realiza cada tres mese despues del segundo servicio</small>
                                             </label>
                                             <!-- <span class="help-text">Amount that you need to pay</span> -->
                                         </div>
@@ -105,7 +108,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div style="margin-top:30px"></div>
+                                <div style="margin-top:14px"></div>
                                 <hr class="style">
 
                                 <div class="form-group">
@@ -116,6 +119,7 @@
 
                             </div>
                         </div>
+                        <!--ONE SHOT-->
                         <div class="row" ng-show="isOneShot">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -145,6 +149,7 @@
 
                             </div>
                         </div>
+                        <!--YEAR-->
                         <div class="row" ng-show="isYear">
                             <div class="col-md-12">
                                 <div class="form-group">

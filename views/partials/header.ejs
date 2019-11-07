@@ -41,6 +41,8 @@
                     <li class="not"><a href="/about">Nosotros</a></li>
                     <li class="not"><a href="/tecno">Tecnología</a></li>
                     <li class="not"><a href="/servicios">Servicio</a></li>
+                    <li class="not"><a href="/validate">Validaciones</a></li>
+                    <!-- <li class="not"><a href="#">Blog</a></li> -->
                     <%}%>
 
                     <% if(titulo === "about") {%>
@@ -48,6 +50,7 @@
                     <li class="not active"><a href="/about">Nosotros</a></li>
                     <li class="not"><a href="/tecno">Tecnología</a></li>
                     <li class="not"><a href="/servicios">Servicio</a></li>
+                    <li class="not"><a href="/validate">Validaciones</a></li>
                     <%}%>
                             
                     <% if(titulo === "tecnologia") {%>
@@ -55,6 +58,7 @@
                     <li class="not"><a href="/about">Nosotros</a></li>
                     <li class="not active"><a href="/tecno">Tecnología</a></li>
                     <li class="not"><a href="/servicios">Servicio</a></li>
+                    <li class="not"><a href="/validate">Validaciones</a></li>
                     <%}%>
 
                     <% if(titulo === "servicios") {%>
@@ -62,15 +66,33 @@
                     <li class="not"><a href="/about">Nosotros</a></li>
                     <li class="not"><a href="/tecno">Tecnología</a></li>
                     <li class="not active"><a href="/servicios">Servicio</a></li>
+                    <li class="not"><a href="/validate">Validaciones</a></li>
                     <% } %>
 
+                    <% if(titulo === "Validaciones") {%>
+                        <li class="home"><a href="/"><i class="fas fa-home"></i><span>Home</span></a></li>
+                        <li class="not"><a href="/about">Nosotros</a></li>
+                        <li class="not"><a href="/tecno">Tecnología</a></li>
+                        <li class="not"><a href="/servicios">Servicio</a></li>
+                        <li class="not active"><a href="/validate">Validaciones</a></li>
+                        <% } %>
+
                 </ul>
+                <% if(titulo != "Calculadora") {%>
                 <ul class="nav navbar-nav text-white ml-auto">
                     <li class="nav-item" role="presentation">
                         <a class="nav-link text-white btn btn-sm" href="#" data-api="smartsupp" data-operation="open"
                             style="border-radius: 24px;background: #0b79b2;/*margin-top: -16px;*/">Solicitar
                             Cita</a></li>
                 </ul>
+                <% } else { %>
+                    <ul class="nav navbar-nav text-white ml-auto">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link text-white btn btn-sm" href="#" ng-click="reset()"
+                                    style="border-radius: 24px;background: #0b79b2;/*margin-top: -16px;*/">
+                                    Reset</a></li>
+                        </ul>
+                <% } %>  
             </div>
         </div>
     </nav>
