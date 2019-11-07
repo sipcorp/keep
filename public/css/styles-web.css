@@ -2650,9 +2650,9 @@ label .fa {
     display: block;
   }
  .swanky_wrapper label:hover {
-    background: #212e41;
-    border-bottom: 1px solid #2A394F;
-    text-indent: 4px;
+  background: #ffffff40;
+  border-radius: 10px;
+  line-height: 10px;
   }
  .swanky_wrapper label:hover .bar {
     width: 100%;
