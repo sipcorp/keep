@@ -12,7 +12,7 @@ module.exports = (app, passport, LocalStrategy) => {
 
   app.get("/", (req, res) => {
     res.render("index", {
-      titulo: "home",
+      titulo: "Home",
       message: req.flash("signinMessage")
     });
   });
@@ -40,25 +40,25 @@ module.exports = (app, passport, LocalStrategy) => {
   */
   app.get('/home', isAuthenticated, (req, res, next) => {
     res.render('home.ejs', {
-      titulo: "home",
+      titulo: "Home",
       name: req.userCode
     });
   });
   app.get('/about',  (req, res, next) => {
     res.render('about.ejs', {
-      titulo: "about",
+      titulo: "Nosotros",
       name: req.userCode
     });
   });
   app.get('/servicios',  (req, res, next) => {
     res.render('servicio.ejs', {
-      titulo: "servicios",
+      titulo: "Servicios",
       name: req.userCode
     });
   });
   app.get('/contact',  (req, res, next) => {
     res.render('contact.ejs', {
-      titulo: "contactenos",
+      titulo: "Contactenos",
       name: req.userCode
     });
   });
@@ -70,7 +70,7 @@ module.exports = (app, passport, LocalStrategy) => {
   });
   app.get('/tecno',  (req, res, next) => {
     res.render('tecno.ejs', {
-      titulo: "tecnologia",
+      titulo: "Tecnologia",
       name: req.userCode
     });
   });

@@ -241,16 +241,16 @@ ul {
 /*A ACTIVE*/
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: #fff;
-    background-color: #0b79b2;
-    border-color: #0b79b2 #0b79b2 #fff;
+    background-color: #9fcd3b;
+    border-color: #a3cd39 #73b643 #fff;
 }
 
 .price-plan-area .plan-nav ul li a.nav-link.active::before{
-    background: #0b79b2;
+    background: #8dc640;
 }
 .price-plan-area .plan-nav ul li a.nav-link.active::after{
-    border-right: 5px solid #0b79b2;
-	border-top: 5px solid #0b79b2;
+    border-right: 5px solid #6fb044;
+    border-top: 5px solid #b2d236;
 } 
 .price-plan-area .plan-content .tab-content .tab-pane {
 	margin-top: 75px;
@@ -404,9 +404,9 @@ ul {
     }
    
     .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-        color: #fff !important;
-        background-color: #0b79b2;
-        border-color: #0b79b2 #0b79b2 #fff;
+        color: #fff;
+        background-color: #9fcd3b;
+        border-color: #a3cd39 #73b643 #fff;
     }
     .nav-tabs .nav-link{
         font-family: "Abel", sans-serif;
@@ -432,5 +432,15 @@ ul {
     }
     .nav-link {
         padding: 0.5rem 0rem;
+    }
+    .nav-tabs .nav-link:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        height: 21px;
+        width: 3px;
+        background: #73b643 ;
+        top: 11px;
+        transition: all 0.3s;
     }
 }
