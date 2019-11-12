@@ -2859,4 +2859,14 @@ section.videobanne{
   border-radius: 12px;
   height: 550px;
 }
+.close{
+  position: absolute;
+    margin-left: 13px;
+    background: #ffffff8f !important;
+    margin-top: 10px;
+    color: #0a0a0a;
+    border-radius: 63px;
+    width: 25px;
+    height: 25px;
+}
 }
