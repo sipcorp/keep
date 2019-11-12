@@ -2805,6 +2805,9 @@ section.videobanne{
   color: white;
 }
 
+.overlay-movile{
+ display: none;
+}
 
 .overlay img {
   width: 600px;
@@ -2830,4 +2833,30 @@ section.videobanne{
   -moz-text-shadow: 2px 2px 2px rgba(179, 171, 171, 0.8);
   -o-text-shadow: 2px 2px 2px rgba(179, 171, 171, 0.8);
   -ms-text-shadow: 2px 2px 2px rgba(179, 171, 171, 0.8);
+}
+@media only screen and (max-width: 767px){
+  .overlay{
+    display: none;
+  }
+  .overlay-movile{
+    width: 34%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    background-image: linear-gradient(
+      to right,
+      var(--left-color),
+      var(--right-color)
+    );
+    border-radius: 10px;
+    color: white;
+    display: block;
+  }
+  .containers {
+    margin-top: -10px;
+}
+.h-505 {
+  border-radius: 12px;
+  height: 550px;
+}
 }
