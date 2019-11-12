@@ -2870,3 +2870,17 @@ a.article, a.article:hover {
     height: 25px;
 }
 }
+
+
+.prockeep{
+  height: 80px;
+  width: 80px;
+  background: url(img/ProkeepLogo.png) no-repeat;
+  margin-left: -8px;
+  background-size: 103px;
+  margin-top: -11px;
+  color: #ffffff00;
+  text-rendering: geometricPrecision;
+  padding-left: 23px;
+  padding-top: 5px;
+}
