@@ -2748,3 +2748,86 @@ a.article, a.article:hover {
     background: #6d7fcc !important;
     color: #fff !important;
 }
+
+section{
+  display: inline;
+}
+
+
+section.videobanne{
+  width: 100%;
+  height: 90vh;
+  background: #ffffff00;
+  border-radius: 23px;
+}
+
+.modal-content-fix {
+  background-color: #fff0;
+  border: none;
+}
+:root {
+  --form-height: 550px;
+  --form-width: 900px;
+  /*  Sea Green */
+  --left-color: #9fdeaf;
+  /*  Light Blue  */
+  --right-color: #96dbe2;
+}
+
+
+
+.containers {
+  width: var(--form-width);
+  height: var(--form-height);
+  position: relative;
+  margin: auto;
+  box-shadow: none;
+  border-radius: 10px;
+  margin-top: 50px;
+  padding:0px;
+}
+/* 
+----------------------
+      Overlay
+----------------------
+*/
+.overlay {
+  width: 100%;
+  height: 81%;
+  position: absolute;
+  z-index: 100;
+  background-image: linear-gradient(
+    to right,
+    var(--left-color),
+    var(--right-color)
+  );
+  border-radius: 10px;
+  color: white;
+}
+
+
+.overlay img {
+  width: 600px;
+}
+.h-505{
+  border-radius: 12px;
+}
+.carousel-header{
+  position: absolute;
+  top: 179px;
+  left: 368px;
+  text-align: center;
+}
+.capitalizer-w{
+  color: #fff;
+  font-size: 2em;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px rgba(179, 171, 171, 0.8);
+  -webkit-text-shadow: 2px 2px 2px rgba(179, 171, 171, 0.8);
+  -moz-text-shadow: 2px 2px 2px rgba(179, 171, 171, 0.8);
+  -o-text-shadow: 2px 2px 2px rgba(179, 171, 171, 0.8);
+  -ms-text-shadow: 2px 2px 2px rgba(179, 171, 171, 0.8);
+}

@@ -36,7 +36,11 @@ $(document).ready(function () {
   })
   
 });
-
+$(document).ready(function () {
+  $("#modalOnLoad").modal('show');
+  $('#modalOnLoad').modal('handleUpdate')
+  
+});
 // $(function() {
 //   if ($("#sidebar-menu, #customize-menu").metisMenu({
 //           activeClass: "open"
