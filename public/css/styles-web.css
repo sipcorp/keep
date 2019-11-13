@@ -2622,21 +2622,23 @@ label .fa {
   .movile-nav{
       display: none;
   }
- .swanky_wrapper label {
+  .swanky_wrapper label {
     padding: 26px;
     float: left;
-    margin-left: 52px;
+    margin-left: 1px;
     height: 0px;
-    border-bottom: 4px solid;
+    border: 2px solid;
     position: relative;
-    width: 57%;
-    color: #eff4fa;
+    width: 99%;
+    color: #eff4fa00;
     -webkit-transition: text-indent .15s, height .3s;
     transition: text-indent .15s, height .3s;
     box-sizing: border-box;
     background: none;
     cursor: pointer;
-  }
+    border-radius: 10px;
+    background: #cccccc0a;
+}
    .swanky_wrapper label img {
     margin-right: 10px;
     position: relative;

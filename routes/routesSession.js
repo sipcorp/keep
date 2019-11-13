@@ -116,6 +116,12 @@ module.exports = (app, passport, LocalStrategy) => {
       name: req.userCode
     });
   });
+  app.get('/research',  (req, res, next) => {
+    res.render('research.ejs', {
+      titulo: "Eficiencia Biologica",
+      name: req.userCode
+    });
+  });
   /*
 #######################################################
                  CLOSE SESSION
