@@ -2793,29 +2793,30 @@ a.article, a.article:hover {
       Overlay
 ----------------------
 */
-.overlay {
-  width: 100%;
-  height: 81%;
-  position: absolute;
-  z-index: 100;
-  background-image: linear-gradient(
-    to right,
-    var(--left-color),
-    var(--right-color)
-  );
-  border-radius: 10px;
-  color: white;
+.da-s55{
+  width: 58%;
+  height: 226px;
+  position: relative;
+  left: 145px;
 }
-
+.da-img {
+  float: right;
+  margin-top: -28px;
+  margin-left: -125px;
+  position: relative;
+  left: 54px;
+}
 .overlay-movile{
  display: none;
 }
 
 .overlay img {
-  width: 600px;
+  width: 50%;
 }
-.h-505{
+.h-505 {
   border-radius: 12px;
+  
+  margin-left: 182px;
 }
 .carousel-header{
   position: absolute;
@@ -2845,11 +2846,6 @@ a.article, a.article:hover {
     height: 100%;
     position: absolute;
     z-index: 100;
-    background-image: linear-gradient(
-      to right,
-      var(--left-color),
-      var(--right-color)
-    );
     border-radius: 10px;
     color: white;
     display: block;
@@ -2860,6 +2856,25 @@ a.article, a.article:hover {
 .h-505 {
   border-radius: 12px;
   height: 550px;
+  margin-left: 0px;
+  width: 100%;
+}
+.carousel-indicators li {
+  box-sizing: content-box;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom:none;
+  opacity: .5;
+  transition: opacity .6s ease;
 }
 .close{
   position: absolute;
