@@ -206,7 +206,9 @@ section .section-title {
 
 
 }
-
+.l{
+  letter-spacing: -1px;
+}
 .bio-block {
   background-color: #0b79b2;
   width: 100%;
