@@ -271,6 +271,14 @@ section .section-title {
 .top-movile{
   top: 171px;
 }
+#third_toggle:checked ~ .toggle_option_slider {
+  background: #e67e22;
+  left: 217px !important;
+}
+#second_toggle:checked ~ .toggle_option_slider {
+  background: #e67e22;
+  left: 114px !important;
+}
 .toggle_radio label {
   font: 82%/1.618 "Source Sans Pro" !important;
   width: 99px !important;
