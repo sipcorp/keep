@@ -301,9 +301,10 @@ section .section-title {
   margin: 4px auto;
   padding: 0 !important;
   position: relative;
-  height: 48px;
-  width: 376px;
+  height: 50px;
+  width: 705px;
   margin-top: 26px;
+  letter-spacing: 4px;
 }
 .toggle_radio > * {
   float: left;
@@ -313,20 +314,20 @@ section .section-title {
   /*position: fixed;*/
 }
 .toggle_radio label{
-  font: 90%/1.618 "Source Sans Pro";
-  color: rgb(255, 255, 255);
-  z-index: 0;
-  display: block;
-  width: 110px;
-  height: 36px;
-  margin: 3px 3px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  cursor: pointer;
-  z-index: 1;
-  background: #0b79b2;
-  text-align: center;
+  font: 114%/1.618 "Source Sans Pro";
+    color: rgb(255, 255, 255);
+    z-index: 0;
+    display: block;
+    width: 173px;
+    height: 45px;
+    margin: 3px 28px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1;
+    background: #0b79b2;
+    text-align: center;
 }
 .label-a{
   margin-top: -1px;
@@ -334,34 +335,32 @@ section .section-title {
   justify-content: center;
 }
 .toggle_option_slider{
-    /* display: none; */
-    /* background: red; */
-    width: 88px;
-    height: 4px;
-    position: absolute;
-    top: 44px;
-    right: 7px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    transition: all .4s ease;
+  width: 140px;
+  height: 33px;
+  position: absolute;
+  top: -9px;
+  right: 7px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 #first_toggle:checked ~ .toggle_option_slider{
   background: #e67e22;
-  left: 16px;
+  left: 46px;
 }
 #second_toggle:checked ~ .toggle_option_slider{
   background: #e67e22;
-  left: 130px;
+  left: 276px;
 }
 #third_toggle:checked ~ .toggle_option_slider{
   background: #e67e22;
-  left: 245px;
+  left: 500px;
 }
 
 #virus,
