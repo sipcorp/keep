@@ -112,7 +112,7 @@ module.exports = (app, passport, LocalStrategy) => {
   });
   app.get('/validate',  (req, res, next) => {
     res.render('validate.ejs', {
-      titulo: "Validaciones",
+      titulo: "Compatibilidad ",
       name: req.userCode
     });
   });

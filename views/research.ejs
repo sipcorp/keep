@@ -10,22 +10,23 @@
     <% include ./partials/header %>
     <!-- page-wrapper -->
     <div class="wrapper">
-        <div class="toggle_radio">
+        <div class="toggle_radio ">
             <input type="radio" class="toggle_option" id="first_toggle" name="toggle_option" checked>
             <input type="radio" class="toggle_option" id="second_toggle" name="toggle_option">
             <input type="radio" class="toggle_option" id="third_toggle" name="toggle_option">
-            <label for="first_toggle">
+            <label class="btn btn-info btn-lg btn3d" for="first_toggle">
                 <p class="label-a">BACTERIAS</p>
             </label>
-            <label for="second_toggle">
+            <label class="btn btn-info btn-lg btn3d" for="second_toggle">
                 <p class="label-a">VIRUS</p>
             </label>
-            <label for="third_toggle">
+            <label class="btn btn-info btn-lg btn3d" for="third_toggle">
                 <p class="label-a">HONGOS</p>
             </label>
             <div class="toggle_option_slider">
             </div>
         </div>
+        
         <!-- Team -->
         <section id="bacterias" class="pb-5 active">
             <div class="clearfix mb-5"></div>
@@ -1420,36 +1421,7 @@
         <!-- Team -->
 
         <a class="gotopbtn" href="#" id="myBtn"> <i class="fas fa-arrow-up"></i> </a>
-        <div class="footer-dark">
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-3 item">
-                            <h3>Servicios</h3>
-                            <ul>
-                                <li><a href="#">Hospitalario</a></li>
-                                <li><a href="#">Hogar</a></li>
-                                <li><a href="#">Clínica<br></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6 col-md-3 item">
-                            <h3>Nosotros</h3>
-                            <ul>
-                                <li><a href="#">Compañia</a></li>
-                                <li><a href="#">Equipo</a></li>
-                                <li><a href="#">Protocolos</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-4 col-md-6 item text"><img src="img/ProkeepLogo.png" width="150">
-                            <p>Empresa especializada en la desinfección de superficies , con sistemas innovadores de
-                                alta
-                                efectividada<br></p>
-                        </div>
-                    </div>
-                    <p class="copyright">prockeep © 2019</p>
-                </div>
-            </footer>
-        </div>
+        <% include ./partials/footer %>
         <% include ./partials/script %>
         <script src="js/validate.js"></script>
 
