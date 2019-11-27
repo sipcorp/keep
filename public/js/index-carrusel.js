@@ -1,134 +1,58 @@
-$(document).ready(function() {
-    $("#news-slider").owlCarousel({
-        items : 2,
-        itemsDesktop : [1199,2],
-        itemsMobile : [600,1],
-        pagination :true,
-        autoPlay : true
-    });
-    
-    $("#news-slider2").owlCarousel({
-        items:3,
-        itemsDesktop:[1199,2],
-        itemsDesktopSmall:[980,2],
-        itemsMobile:[600,1],
-        pagination:false,
-        navigationText:false,
-        autoPlay:true
-    });
-    
-    $("#news-slider3").owlCarousel({
-        items:3,
-        itemsDesktop:[1199,2],
-        itemsDesktopSmall:[1000,2],
-        itemsMobile:[700,1],
-        pagination:false,
-        navigationText:false,
-        autoPlay:true
-    });
-    
-    $("#news-slider4").owlCarousel({
-        items:3,
-        itemsDesktop:[1199,3],
-        itemsDesktopSmall:[1000,2],
-        itemsMobile:[600,1],
-        pagination:false,
-        navigationText:false,
-        autoPlay:true
-    });
-    
-    $("#news-slider5").owlCarousel({
-        items:3,
-        itemsDesktop:[1199,3],
-        itemsDesktopSmall:[1000,2],
-        itemsMobile:[650,1],
-        pagination:false,
-        navigationText:false,
-        autoPlay:true
-    });
-    
-    $("#news-slider6").owlCarousel({
-        items : 3,
-        itemsDesktop:[1199,3],
-        itemsDesktopSmall:[980,2],
-        itemsMobile : [600,1],
-        pagination:false,
-        navigationText:false
-    });
-    
-    $("#news-slider7").owlCarousel({
-        items : 3,
-        itemsDesktop : [1199,3],
-        itemsDesktopSmall : [1000,2],
-        itemsMobile : [650,1],
-        pagination :false,
-        autoPlay : true
-    });
-    
-    $("#news-slider8").owlCarousel({
-        items : 3,
-        itemsDesktop:[1199,3],
-        itemsDesktopSmall:[980,2],
-        itemsMobile : [600,1],
-        autoPlay:true
-    });
-    
-    $("#news-slider9").owlCarousel({
-        items : 3,
-        itemsDesktop:[1199,2],
-        itemsDesktopSmall:[980,2],
-        itemsTablet:[650,1],
-        pagination:false,
-        navigation:true,
-        navigationText:["",""]
-    });
-    
-    $("#news-slider10").owlCarousel({
-        items : 4,
-        itemsDesktop:[1199,3],
-        itemsDesktopSmall:[980,2],
-        itemsMobile : [600,1],
-        navigation:true,
-        navigationText:["",""],
-        pagination:true,
-        autoPlay:true
-    });
-    
+$(document).ready(function () {
+
+
     $("#news-slider11").owlCarousel({
-        items : 4,
-        itemsDesktop:[1199,3],
-        itemsDesktopSmall:[980,2],
-        itemsMobile : [600,1],
-        pagination:true,
-        autoPlay:true
+        items: 4,
+        itemsDesktop: [1199, 3],
+        itemsDesktopSmall: [980, 2],
+        itemsMobile: [600, 1],
+        pagination: true,
+        autoPlay: true
     });
-    
-    $("#news-slider12").owlCarousel({
-        items : 2,
-        itemsDesktop:[1199,2],
-        itemsDesktopSmall:[980,1],
-        itemsTablet: [600,1],
-        itemsMobile : [550,1],
-        pagination:true,
-        autoPlay:true
-    });
-    
-    $("#news-slider13").owlCarousel({
-        navigation : false,
-        pagination : true,
-        items : 3,
-        itemsDesktop:[1199,3],
-        itemsDesktopSmall:[980,2],
-        itemsMobile : [600,1],
-        navigationText : ["",""]
-    });
-    
-    $("#news-slider14").owlCarousel({
-        items : 4,
-        itemsDesktop:[1199,3],
-        itemsDesktopSmall:[980,2],
-        itemsMobile : [550,1],
-        pagination:false,
-        autoPlay:true
-    });
+
+
+
+    var header = $('.main_banner ');
+
+    var backgrounds = new Array(
+        'url(img/2283.jpg)'
+        , 'url(img/12785.jpg)');
+
+    var current = 0;
+
+    function nextBackground() {
+        current++;
+        current = current % backgrounds.length;
+        header.css('background-image', backgrounds[current]);
+    }
+    setInterval(nextBackground, 5000);
+
+    header.css('background-image', backgrounds[0]);
+
+
+    var sliding = false,
+        curSlide = 1,
+        numOfSlides = $(".slider--el").length;
+   
+
+    function carusel(){
+         if (sliding) return;
+        sliding = true;
+        $(".slider--el").show();
+        $(".slider--el").css("top");
+        $(".slider--el.active").addClass("removed");
+        ($(this).hasClass("right")) ? curSlide++ : curSlide--;
+        if (curSlide < 1) curSlide = numOfSlides;
+        if (curSlide > numOfSlides) curSlide = 1;
+        $(".slider--el-" + curSlide).addClass("next");
+
+        setTimeout(function () {
+            $(".slider--el.removed").hide();
+            $(".slider--el").removeClass("active next removed");
+            $(".slider--el-" + curSlide).addClass("active");
+            sliding = false;
+        }, 1800);
+    }     
+        setInterval(carusel, 5000);
 });
+
