@@ -28,19 +28,24 @@ $(document).ready(function () {
     $(".page-wrapper").addClass("toggled");
   });
   $("#sidebar-collapse-btn").on("click", function (e) {
-    e.preventDefault(), 
-    $("#app").toggleClass("sidebar-open")
+    e.preventDefault(),
+      $("#app").toggleClass("sidebar-open")
   })
   $("#sidebar-overlay").on("click", function () {
     $("#app").removeClass("sidebar-open")
   })
-  
+
 });
 $(document).ready(function () {
   $("#modalOnLoad").modal('show');
   $('#modalOnLoad').modal('handleUpdate')
-  
+  $(".menu-icon").on("click", function () {
+    $("nav ul").toggleClass("showing");
+  });
 });
+
+// Scrolling Effect
+
 // $(function() {
 //   if ($("#sidebar-menu, #customize-menu").metisMenu({
 //           activeClass: "open"

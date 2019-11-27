@@ -1,4 +1,4 @@
-<div class="social-icons mx-liner">
+<!-- <div class="social-icons mx-liner">
     <div class="mr-2 ml-3">
         <a href="https://twitter.com/Prockeep_Mobile?s=08">
             <i id="social-tw" class="fab fa-twitter"></i>
@@ -28,9 +28,11 @@
 </div>
 <header class="text-white site-preheader">
     <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand" href="#"
-                style="width: 280px;float: left;margin-top: -19px;"><img class="img-fluid img-movile"
-                    src="img/ProkeepLogo.png" width="500"></a><button data-toggle="collapse"
+        <div class="container-fluid">
+            <a class="navbar-brand" href="" style="width: 280px;float: left;margin-top: -19px;">
+                <img class="img-fluid img-movile" src="img/ProkeepLogo.png" width="500">
+            </a>
+            <button data-toggle="collapse"
                 class="navbar-toggler button-movile" data-target="#navcol-1"
                 style="background: rgba(255,255,255,0);"><span class="sr-only">Toggle navigation</span><span
                     class="navbar-toggler-icon"><i class="fas fa-th-list"></i></span></button>
@@ -43,7 +45,7 @@
                     <li class="not"><a href="/servicios">Servicio</a></li>
                     <li class="not"><a href="/validate">Compatibilidad</a></li>
                     <li class="not"><a href="/research">Eficiencia Biologica</a></li>
-                    <!-- <li class="not"><a href="#">Blog</a></li> -->
+                   
                     <%}%>
 
                     <% if(titulo === "Nosotros") {%>
@@ -91,10 +93,7 @@
                 <%}%>
                 </ul>
                 <% if(titulo != "Calculadora") {%>
-                <!-- <ul class="nav navbar-nav text-white ml-auto">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link text-white btn btn-sm" href="/contact"  style="border-radius: 24px;background: #0b79b2;/*margin-top: -16px;*/">Solicitar Cita</a></li>
-                </ul> -->
+               
                 <% } else { %>
                     <ul class="nav navbar-nav text-white ml-auto">
                             <li class="nav-item" role="presentation">
@@ -119,11 +118,9 @@
                     <i class="fas fa-times"></i>
                 </div>
             </div>
-            <!-- / Begin Body -->
+           
             <div class='swanky'>
-                <!-- / Introduction Block -->
-
-                <!-- /////////// Begin Dropdown //////////// -->
+               
                 <div class='swanky_wrapper'>
                     <label for='Dashboard' class="swanky_active">
                         <span>
@@ -169,14 +166,166 @@
                             </span>
                         </label>
                 </div>
-                <!-- /////////// End Dropdown //////////// -->
+           
             </div>
-            <!-- / My Footer -->
-            <!-- <ul class="list-unstyled CTAs">
-                <li>
-                    <a href="/contact"  class="download">Solicitar Cita</a>
-                </li>
-            </ul> -->
+          
         </div>
     </nav>
-</div>
+</div> -->
+
+<% if(titulo === "Home") {%>
+<script src="./js/jquery.min.js"></script>
+<script>
+    $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+            $('nav').addClass('black');
+        }
+
+        else {
+            $('nav').removeClass('black');
+        }
+    });
+</script>
+<header>
+    <nav class="menum">
+        <div class="menu-icon">
+            <i class="fa fa-bars fa-2x"></i>
+        </div>
+        <div class="logo">
+            <a class="navbar-brand" href="" style="width: 325px;float: left;margin-top: -14px;margin-left: -20px;">
+                <img class="img-fluid img-movile" src="img/ProkeepLogo.png" width="500">
+            </a>
+        </div>
+        <div class="menu">
+            <ul class="topBotomBordersOut">
+                <li class="nav-item "><a class="nav-link active" href="/"><i class="fas fa-home"></i><span class="big_title3 "> Home</span></a></li>
+                <li class="nav-item"><a class="nav-link " href="/about"><span class="big_title3 ">Nosotros</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="/tecno"><span class="big_title3 ">Tecnología</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="/servicios"><span class="big_title3 ">Servicio</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="/validate"><span class="big_title3 ">Compatibilidad</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="/research"><span class="big_title3 ">Eficiencia Biologica</span></a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<%}%>
+<% if(titulo === "Nosotros"){%>
+<header style="height: 11vh;">
+    <nav class="menum black">
+        <div class="menu-icon">
+            <i class="fa fa-bars fa-2x"></i>
+        </div>
+        <div class="logo">
+            <a class="navbar-brand" href="" style="width: 325px;float: left;margin-top: -14px;margin-left: -20px;">
+                <img class="img-fluid img-movile" src="img/ProkeepLogo.png" width="500">
+            </a>
+        </div>
+        <div class="menu">
+            <ul class="topBotomBordersOut">
+                    <li class="nav-item active"><a class="nav-link" href="/"><i class="fas fa-home"></i><span class="big_title3 "> Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/about"><span class="big_title3 ">Nosotros</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tecno"><span class="big_title3 ">Tecnología</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/servicios"><span class="big_title3 ">Servicio</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/validate"><span class="big_title3 ">Compatibilidad</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/research"><span class="big_title3 ">Eficiencia Biologica</span></a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<%}%>
+<% if(titulo === "Tecnologia" ){%>
+    <header style="height: 11vh;">
+        <nav class="menum black">
+            <div class="menu-icon">
+                <i class="fa fa-bars fa-2x"></i>
+            </div>
+            <div class="logo">
+                <a class="navbar-brand" href="" style="width: 325px;float: left;margin-top: -14px;margin-left: -20px;">
+                    <img class="img-fluid img-movile" src="img/ProkeepLogo.png" width="500">
+                </a>
+            </div>
+            <div class="menu">
+                <ul class="topBotomBordersOut">
+                        <li class="nav-item active"><a class="nav-link" href="/"><i class="fas fa-home"></i><span class="big_title3 "> Home</span></a></li>
+                        <li class="nav-item"><a class="nav-link " href="/about"><span class="big_title3 ">Nosotros</span></a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/tecno"><span class="big_title3 ">Tecnología</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/servicios"><span class="big_title3 ">Servicio</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/validate"><span class="big_title3 ">Compatibilidad</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/research"><span class="big_title3 ">Eficiencia Biologica</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <%}%>
+    <% if(titulo === "Servicios" ){%>
+        <header style="height: 11vh;">
+            <nav class="menum black">
+                <div class="menu-icon">
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
+                <div class="logo">
+                    <a class="navbar-brand" href="" style="width: 325px;float: left;margin-top: -14px;margin-left: -20px;">
+                        <img class="img-fluid img-movile" src="img/ProkeepLogo.png" width="500">
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul class="topBotomBordersOut">
+                            <li class="nav-item active"><a class="nav-link" href="/"><i class="fas fa-home"></i><span class="big_title3 "> Home</span></a></li>
+                            <li class="nav-item"><a class="nav-link " href="/about"><span class="big_title3 ">Nosotros</span></a></li>
+                            <li class="nav-item"><a class="nav-link " href="/tecno"><span class="big_title3 ">Tecnología</span></a></li>
+                            <li class="nav-item"><a class="nav-link  active" href="/servicios"><span class="big_title3 ">Servicio</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="/validate"><span class="big_title3 ">Compatibilidad</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="/research"><span class="big_title3 ">Eficiencia Biologica</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <%}%>
+    <% if( titulo === "Compatibilidad "){%>
+        <header style="height: 11vh;">
+            <nav class="menum black">
+                <div class="menu-icon">
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
+                <div class="logo">
+                    <a class="navbar-brand" href="" style="width: 325px;float: left;margin-top: -14px;margin-left: -20px;">
+                        <img class="img-fluid img-movile" src="img/ProkeepLogo.png" width="500">
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul class="topBotomBordersOut">
+                            <li class="nav-item active"><a class="nav-link" href="/"><i class="fas fa-home"></i><span class="big_title3 "> Home</span></a></li>
+                            <li class="nav-item"><a class="nav-link " href="/about"><span class="big_title3 ">Nosotros</span></a></li>
+                            <li class="nav-item"><a class="nav-link " href="/tecno"><span class="big_title3 ">Tecnología</span></a></li>
+                            <li class="nav-item"><a class="nav-link " href="/servicios"><span class="big_title3 ">Servicio</span></a></li>
+                            <li class="nav-item"><a class="nav-link active" href="/validate"><span class="big_title3 ">Compatibilidad</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="/research"><span class="big_title3 ">Eficiencia Biologica</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <%}%>
+        <% if( titulo === "Eficiencia Biologica"){%>
+            <header style="height: 11vh;">
+                <nav class="menum black">
+                    <div class="menu-icon">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </div>
+                    <div class="logo">
+                        <a class="navbar-brand" href="" style="width: 325px;float: left;margin-top: -14px;margin-left: -20px;">
+                            <img class="img-fluid img-movile" src="img/ProkeepLogo.png" width="500">
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <ul class="topBotomBordersOut">
+                                <li class="nav-item active"><a class="nav-link" href="/"><i class="fas fa-home"></i><span class="big_title3 "> Home</span></a></li>
+                                <li class="nav-item"><a class="nav-link " href="/about"><span class="big_title3 ">Nosotros</span></a></li>
+                                <li class="nav-item"><a class="nav-link " href="/tecno"><span class="big_title3 ">Tecnología</span></a></li>
+                                <li class="nav-item"><a class="nav-link " href="/servicios"><span class="big_title3 ">Servicio</span></a></li>
+                                <li class="nav-item"><a class="nav-link " href="/validate"><span class="big_title3 ">Compatibilidad</span></a></li>
+                                <li class="nav-item"><a class="nav-link active" href="/research"><span class="big_title3 ">Eficiencia Biologica</span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <%}%>

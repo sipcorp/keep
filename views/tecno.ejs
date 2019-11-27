@@ -5,104 +5,119 @@
 <link rel="stylesheet" href="css/styles-keep.css">
 
 <body class="easy">
-    <% include ./partials/header %>
-    <div class="profil  py-5 ">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="slider">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                            </ol>
-                            <div style="    border-radius: 0.25rem;" class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="img-thumbnail" src="img/cas.png" alt="First slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="img-thumbnail" src="img/medibios.png" alt="Second slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="img-thumbnail" src="img/medibios-2.png" alt="Third slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="img-thumbnail" src="img/victori.png" alt="Third slide">
+    <div class="wrapper">
+        <% include ./partials/header %>
+        <div class="content">
+            <div class="profil  py-5 ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8 pl-4">
+                            <div class="slider">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                                        </li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                    </ol>
+                                    <div style="    border-radius: 0.25rem;" class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img class="img-thumbnail" src="img/cas.png" alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-thumbnail" src="img/medibios.png" alt="Second slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-thumbnail" src="img/medibios-2.png" alt="Third slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-thumbnail" src="img/victori.png" alt="Third slide">
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                        data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                        data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
                                 </div>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                                data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                                data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="olanaklar-kutu mt-3">
-                        <div class="olanaklar">
-                            <h4 class="pb-3 big_title">
-                                <span style="margin-left: 60px;">-KEEP <span
-                                        style="color: #0b79b2;">System</span></span>
-                            </h4>
-                            <p class="title-cert"> <small>Certificacion de Ambiemte Seguro</small> </p>
-                        </div>
-                        <div class="olanaklar margin-top--22">
-                            <p class="mb-2"> <strong>Bio-Keep</strong> es el sistema con el cual Integramos una serie de
-                                Métodos y
-                                Herramientas de alta tecnología, y a través de él logramos la reducción y erradicación
-                                <strong>certificada</strong> de microorganismos, hongos y esporas en su ambiente. </p>
-                            <p class="mb-2">Nuestro procedimiento de Desinfección de Alto Nivel por vía
-                                Aérea,<strong>(Micro
-                                    Nebulizador De Última Generación)</strong> y nuestro potente desinfectante a base
-                                Peróxido
-                                De Hidrógeno Y Sales De Plata; nos permiten que las partículas sean
-                                aerotransportadas y lleguen a todas las superficies libres, permaneciendo en
-                                suspensión hasta su natural descomposición, logrando obtener una gran Actividad
-                                Biocida y amplio espectro de acción, garantizando así una acción rápida en los
-                                procesos.
-                            </p>
-                            <p> Con nuestros sistema de monitoreo y vigilancia, realizamos Validaciones <strong>Real
-                                    Time</strong>, rápidas y precisas, aplicando Pruebas De Carga Bacteriológicas con
-                                los mas
-                                altos estándares de seguridad y proporcionando así una verificación de la efectividad
-                                de nuestros procesos, por ello con <strong>Bio-Keep System</strong> podemos emitir
-                                nuestro
-                                certificado con sello de <strong>Ambiente Seguro</strong>, brindando un respaldo total a
-                                nuestro
-                                clientes ya que nuestro sistema es totalmente auditable y permite verificar sus
-                                resultados en nuestra sistema de reportes <strong>C-Keep</strong>. </p>
+                            <div class="olanaklar-kutu mt-3">
+                                <div class="olanaklar">
+                                    <h4 class="pb-3 big_title">
+                                        <span style="margin-left: 60px;">-KEEP <span
+                                                style="color: #0b79b2;">System</span></span>
+                                    </h4>
+                                    <p class="title-cert"> <small>Certificacion de Ambiemte Seguro</small> </p>
+                                </div>
+                                <div class="olanaklar margin-top--22">
+                                    <p class="mb-2"> <strong>Bio-Keep</strong> es el sistema con el cual Integramos una
+                                        serie de
+                                        Métodos y
+                                        Herramientas de alta tecnología, y a través de él logramos la reducción y
+                                        erradicación
+                                        <strong>certificada</strong> de microorganismos, hongos y esporas en su
+                                        ambiente. </p>
+                                    <p class="mb-2">Nuestro procedimiento de Desinfección de Alto Nivel por vía
+                                        Aérea,<strong>(Micro
+                                            Nebulizador De Última Generación)</strong> y nuestro potente desinfectante a
+                                        base
+                                        Peróxido
+                                        De Hidrógeno Y Sales De Plata; nos permiten que las partículas sean
+                                        aerotransportadas y lleguen a todas las superficies libres, permaneciendo en
+                                        suspensión hasta su natural descomposición, logrando obtener una gran Actividad
+                                        Biocida y amplio espectro de acción, garantizando así una acción rápida en los
+                                        procesos.
+                                    </p>
+                                    <p> Con nuestros sistema de monitoreo y vigilancia, realizamos Validaciones
+                                        <strong>Real
+                                            Time</strong>, rápidas y precisas, aplicando Pruebas De Carga
+                                        Bacteriológicas con
+                                        los mas
+                                        altos estándares de seguridad y proporcionando así una verificación de la
+                                        efectividad
+                                        de nuestros procesos, por ello con <strong>Bio-Keep System</strong> podemos
+                                        emitir
+                                        nuestro
+                                        certificado con sello de <strong>Ambiente Seguro</strong>, brindando un respaldo
+                                        total a
+                                        nuestro
+                                        clientes ya que nuestro sistema es totalmente auditable y permite verificar sus
+                                        resultados en nuestra sistema de reportes <strong>C-Keep</strong>. </p>
 
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card"></div>
-                    <div class="card-body text-center">
-                            <span class="badge badge-primary badge-movile" style="font-size: 17px;">Certificaciones</span>
-                    </div>
-                    <img class="card-img-top" src="img/certificados.png" alt="Card image cap">
-                    <div class="card-body text-center ">
-                       
-                        <p class="card-text"> <strong class="prockeep">prockeep</strong> tus mejores aliados
-                            en la lucha contra la contaminación, nuestro principal
-                            objetivo es la excelencia en nuestros servicios.</p>
-                        <!-- <a data-api="smartsupp" data-operation="open" href="#"
+                        <div class="col-md-4">
+                            <div class="card"></div>
+                            <div class="card-body text-center">
+                                <span class="badge badge-primary badge-movile"
+                                    style="font-size: 17px;">Certificaciones</span>
+                            </div>
+                            <img class="card-img-top" src="img/certificados.png" alt="Card image cap">
+                            <div class="card-body text-center ">
+
+                                <p class="card-text"> <strong class="prockeep">prockeep</strong> tus mejores aliados
+                                    en la lucha contra la contaminación, nuestro principal
+                                    objetivo es la excelencia en nuestros servicios.</p>
+                                <!-- <a data-api="smartsupp" data-operation="open" href="#"
                             class="btn btn-sm btn-primary btn-block">Solicita
                             cita</a> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <% include ./partials/footer %>
     </div>
 
-    <% include ./partials/footer %>
     <% include ./partials/script %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="js/NewsHeaher.js"></script>

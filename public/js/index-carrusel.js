@@ -11,25 +11,6 @@ $(document).ready(function () {
     });
 
 
-
-    var header = $('.main_banner ');
-
-    var backgrounds = new Array(
-        'url(img/2283.jpg)'
-        , 'url(img/12785.jpg)');
-
-    var current = 0;
-
-    function nextBackground() {
-        current++;
-        current = current % backgrounds.length;
-        header.css('background-image', backgrounds[current]);
-    }
-    setInterval(nextBackground, 5000);
-
-    header.css('background-image', backgrounds[0]);
-
-
     var sliding = false,
         curSlide = 1,
         numOfSlides = $(".slider--el").length;
