@@ -49,3 +49,195 @@
     background-size: 60px;
     margin-top: -15px;
 } 
+
+.text-shadow{
+    text-shadow: 1px 1px #ffffff, -1px 1px #ffffff, 1px -1px #ffffff, -1px -1px #ffffff, 1px 1px 5px #252920;
+}
+
+.text-shadow1{
+    color: #000000;
+background: #FFFFFF;
+text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+}
+
+
+
+.gallery {
+  width: 100%;
+  max-width: 60rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+}
+
+.gallery .item {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (max-width: 40rem) {
+  .gallery .item {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+.gallery .item:nth-child(even) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.gallery .item:nth-child(even) .img-wrap {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+@media (max-width: 40rem) {
+  .gallery .item:nth-child(even) .img-wrap {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+.gallery .item:nth-child(even) caption {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+@media (max-width: 40rem) {
+  .gallery .item:nth-child(even) caption {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+
+.gallery .item .img-wrap {
+    position: relative;
+    left: 112px;
+    padding: 0rem;
+    width: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    border-radius: 50%;
+}
+@media (max-width: 40rem) {
+  .gallery .item .img-wrap {
+    width: 80%;
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
+}
+
+.gallery .item .img-wrap img {
+  display: block;
+  width: 65%;
+  height: auto;
+  padding: 1.5rem;
+  border-radius: 50%;
+  
+}
+
+.gallery .item:hover .img-wrap:after {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.gallery .item:nth-child(1) .img-wrap,
+.gallery .item:nth-child(5) .img-wrap {
+  width: 30%;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+@media (max-width: 40rem) {
+  .gallery .item:nth-child(1) .img-wrap,
+  .gallery .item:nth-child(5) .img-wrap {
+    width: 60%;
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
+}
+
+.gallery .item:nth-child(2) .img-wrap,
+.gallery .item:nth-child(4) .img-wrap {
+  width: 40%;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+@media (max-width: 40rem) {
+  .gallery .item:nth-child(2) .img-wrap,
+  .gallery .item:nth-child(4) .img-wrap {
+    width: 70%;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+}
+
+.gallery .item .caption {
+    padding-right: 0rem;
+    padding-left: 0rem;
+    position: relative;
+    color: #999999;
+}
+@media (max-width: 40rem) {
+  .gallery .item .caption {
+    padding-top: 1rem;
+  }
+}
+.caption {
+    box-shadow: none;
+    transition: all 0.3s ease 0s;
+}
+.gallery .item .caption h3 {
+  position: relative;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.gallery .item .caption a {
+  display: inline-block;
+  position: relative;
+  padding: 0.3rem 1rem;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+}
+.gallery .item .caption .btn-buy {
+  margin-right: 1rem;
+  color: #D4AF37;
+  border: 1px solid #D4AF37;
+  letter-spacing: 1px;
+}
+
+.galeryItms{
+    position: absolute;
+    left: 64px;
+    top: 43px;
+    color: #444444;
+background: #FFFFFF;
+text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+}

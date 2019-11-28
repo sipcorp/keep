@@ -53,3 +53,4 @@
         $('.newsticker').newsticker();
     });
 })(jQuery);
+

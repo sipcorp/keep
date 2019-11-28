@@ -1808,7 +1808,7 @@ a {
   position: relative;
 }
 
-input,section {
+input {
   clear: both;
   padding-top: 10px;
   display: none;
@@ -3767,11 +3767,11 @@ nav ul li a {
 }
 .container:hover .front,
 .container:hover .back{
-    -webkit-transition: -webkit-transform .10s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transition: -webkit-transform .10s cubic-bezier(0.4, 0.2, 0.2, 1);
-    -o-transition: transform .10s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transition: transform .10s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transition: transform .10s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .10s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
 .back{
@@ -3786,7 +3786,7 @@ nav ul li a {
   transform: translateY(-50%) translateZ(60px) scale(0.94);
   top: 50%;
   position: absolute;
-  left: 35px;
+  left: 0px;
   width: 100%;
   padding: 2rem;
   -webkit-box-sizing: border-box;
