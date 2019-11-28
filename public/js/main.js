@@ -39,9 +39,13 @@ $(document).ready(function () {
 $(document).ready(function () {
   $("#modalOnLoad").modal('show');
   $('#modalOnLoad').modal('handleUpdate')
-  $(".menu-icon").on("click", function () {
-    $("nav ul").toggleClass("showing");
+  $('.menu-movile, .overlay').click(function () {
+    $('.menu-movile').toggleClass('clicked');
+    
+    $('#nav').toggleClass('show');
+    
   });
+
 });
 
 // Scrolling Effect

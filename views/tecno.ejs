@@ -2,6 +2,7 @@
 <html>
 
 <% include ./partials/head %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
 <link rel="stylesheet" href="css/styles-keep.css">
 
 
@@ -12,13 +13,15 @@
             <div class="fullwidth">
                 <div class="gallery">
                     <figure class="item">
-                        <div class="img-wrap"><img src="img/logo_certificado.png"
-                                alt="" />
-                            </div>
-                            <figcaption class="caption">
-                                    <h1 class="text-shadow1">BIO KEEP SYSTEM</h1>
-                                    <span class="galeryItms">Certificado de Ambiente Seguro</span>
-                                </figcaption>
+                        <div class="col-md-6 img-wrap wow bounceInRight" data-wow-duration="4s">
+                            <img src="img/logo_certificado.png" alt="" />
+
+                        </div>
+
+                        <figcaption class="caption">
+                            <h1 class="text-shadow1 wow bounceInUp">BIO KEEP SYSTEM</h1>
+                            <span class="galeryItms wow bounceInUp">Certificado de Ambiente Seguro</span>
+                        </figcaption>
                     </figure>
                 </div>
             </div>
@@ -28,9 +31,12 @@
     </div>
 
     <% include ./partials/script %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="js/NewsHeaher.js"></script>
     <script src="js/Swiper-Slider-Card-For-Blog-Or-Product.js"></script>
+    
+
 
 </body>
 

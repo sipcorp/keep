@@ -54,3 +54,5 @@
     });
 })(jQuery);
 
+
+new WOW().init();
