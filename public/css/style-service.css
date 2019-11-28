@@ -140,7 +140,9 @@ h1{
     margin-left: 176px;
     
   }
-
+.d9{
+    margin-left: -25px !important;
+}
 .d2{
     position: absolute;
     top: -169px;
