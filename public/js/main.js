@@ -45,7 +45,8 @@ $(document).ready(function () {
     $('#nav').toggleClass('show');
     
   });
-
+  
+  new WOW().init();
 });
 
 // Scrolling Effect

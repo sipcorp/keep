@@ -55,4 +55,4 @@
 })(jQuery);
 
 
-new WOW().init();
+
