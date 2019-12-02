@@ -40,13 +40,15 @@ $(document).ready(function () {
   $("#modalOnLoad").modal('show');
   $('#modalOnLoad').modal('handleUpdate')
   $('.menu-movile, .overlay').click(function () {
-    $('.menu-movile').toggleClass('clicked');
-    
+  $('.menu-movile').toggleClass('clicked');
+
     $('#nav').toggleClass('show');
-    
+
+
   });
+
   
-  new WOW().init();
+
 });
 
 // Scrolling Effect

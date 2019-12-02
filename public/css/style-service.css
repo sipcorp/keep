@@ -5,10 +5,29 @@
 }
 
 .purple{
-    color: purple;
+    width: 100%;
+    color: #202c2d;
+    text-shadow: -3px 3px 0px rgba(0,0,0,0.3);
+}
+.just{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .flright {
     float: right;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 37px;
+    margin-top: 57px;
+    font-style: italic;
+    font-weight: 100;
+}
+.ul-style{
+    justify-content: center;
+    align-items: center;
+    margin-left: 66px;
 }
 h1{
     text-align:center;
@@ -32,15 +51,15 @@ h1{
        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
 
-  .blog-card-hospital:hover,
+  /* .blog-card-hospital:hover,
   .blog-card-clinica:hover,
   .blog-card-industria:hover,
   .blog-card-escuela:hover,
   .blog-card-hogar:hover{
       color: #fff !important;
     background: rgba(0,123,255,.25);
-  }
-  .blog-card-hospital:hover .blog-table a,
+  } */
+  /* .blog-card-hospital:hover .blog-table a,
   .blog-card-hospital:hover .blog-table p,
   .blog-card-clinica:hover .blog-table a,
   .blog-card-clinica:hover .blog-table p,
@@ -51,8 +70,10 @@ h1{
   .blog-card-hogar:hover .blog-table a,
   .blog-card-hogar:hover .blog-table p{
     color: #fff !important;
-  }
-
+  } */
+.blog-card-description{
+    font-size: 16px;
+}
   .blog-card .blog-card-image {
       height: 60%;
       position: relative;

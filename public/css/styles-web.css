@@ -676,7 +676,18 @@ a:hover {
 
 
 .deepshd {
-	overflow: hidden;
+	color: #fff;
+    font-size: 75px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .20em;
+    margin: 20px 0 0 0;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.8), 
+                 0px 8px 13px rgba(0,0,0,0.4),
+                 0px 18px 23px rgba(0,0,0,0.4);
+    animation-duration: 1s;
+    animation-delay: .5s;
+	/* overflow: hidden;
 	font-size: 75px;
 	line-height: 86px;
 	font-weight: 700;
@@ -684,7 +695,7 @@ a:hover {
 	margin-top: 50px;
 	height: 500px;
 	color: #ffffff;
-	text-shadow: 3px 5px 2px #474747;
+	text-shadow: 3px 5px 2px #474747; */
 }
 
 @font-face {
@@ -778,6 +789,8 @@ a:hover {
 	transform: scale(0.834);
 }
 
+
+
 .slider--el.anim-5parts .part {
 	position: absolute;
 	top: 0;
@@ -863,6 +876,9 @@ a:hover {
 	transform: translateY(100%);
 }
 
+
+
+/*SLIDER 9*/
 .slider--el.anim-9parts .slider--el-bg {
 	-webkit-perspective: 2000;
 	perspective: 2000;
@@ -1020,6 +1036,8 @@ a:hover {
 	opacity: 0;
 }
 
+
+
 .slider--el.anim-3parts .part {
 	position: absolute;
 	top: 0;
@@ -1081,6 +1099,8 @@ a:hover {
 	-webkit-transform: translate3D(100%, -33.333%, 0);
 	transform: translate3D(100%, -33.333%, 0);
 }
+
+
 
 .slider--el.anim-4parts .part {
 	position: absolute;
@@ -1150,6 +1170,7 @@ a:hover {
 	transform: translateX(100%);
 }
 
+
 .slider--el-bg {
 	position: absolute;
 	top: -10%;
@@ -1199,6 +1220,7 @@ a:hover {
 .slider--el.removed .slider--el-content {
 	opacity: 0;
 }
+
 
 .nav-item {
 	font-family: Century Gothic;

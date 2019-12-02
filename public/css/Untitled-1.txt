@@ -1,0 +1,177 @@
+<div class="blog-slider mt-3 mb-2">
+        <div class="blog-slider__wrp swiper-wrapper">
+            <div class="blog-slider__item swiper-slide">
+                <div></div>
+                <div class="blog-slider__img"><img src="img/2283.jpg"></div>
+                <div class="blog-slider__content">
+                    <div class="blog-slider__title">PROFESIONALES Y ESPECIALISTAS EN
+                        DESINFECCIÓN DE ALTO NIVEL</div>
+                    <div class="blog-slider__text">Somos expertos en desinfección de ambientes,
+                        garantizamos un Ambiente Seguro con nuestra
+                        tecnología de Ultima Generación Bio-Keep System, a
+                        través de la cual alcanzamos los mas altos niveles de
+                        calidad y estandarización de nuestros procesos. </div>
+                    <!-- <a class="blog-slider__button" href="/contact">Solicitar
+                        cita</a> -->
+                </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+                <div></div>
+                <div class="blog-slider__img"><img src="img/12785.jpg"></div>
+                <div class="blog-slider__content">
+                    <div class="blog-slider__title">PROTEGEMOS TU SALUD<br />
+                        Y A TU FAMILIA</div>
+                    <div class="blog-slider__text">Erradicamos hongos, bacterias y virus de su
+                        residencia. Con nuestra tecnología Bio-Keep System,
+                        garantizamos un Ambiente Seguro para usted y sus
+                        familiares, ayudando así a la prevención de
+                        enfermedades respiratorias y reumaticas. </div>
+                    <!-- <a class="blog-slider__button" href="/contact">Solicitar
+                        cita</a> -->
+                </div>
+            </div>
+            <div class="blog-slider__pagination"></div>
+        </div>
+    </div>
+
+
+     <div class="tab_container">
+        <input id="tab1" type="radio" name="tabs" checked>
+        <label for="tab1">
+            <i class="fas fa-burn"></i>
+            <span>Desinfección de Alto Nivel</span>
+        </label>
+
+        <input id="tab2" type="radio" name="tabs">
+        <label for="tab2">
+            <i class="fas fa-diagnoses"></i>
+            <span>Sanitizacíon Especializada</span>
+        </label>
+
+        <input id="tab3" type="radio" name="tabs">
+        <label for="tab3">
+            <i class="fa fa-bar-chart-o"></i>
+            <span>Gestíon de Procesos Complementaria</span>
+        </label>
+
+        <section id="content1" class="tab-content top-sd" style="height: 403px;" >
+            <h3 class="h3-movile">Desinfección de Alto Nivel</h3>
+            <p><strong>¿Crees que estás protegido?</strong> Piense de nuevo ... Muchas industrias confían en el método
+                tradicional desinfección. Si bien no se debe desalentar la desinfección tradicional, los estudios
+                demuestran repetidamente que a pesar de todo nuestro arduo trabajo,
+                el método tradicional de desinfección no es muy efectivo para protegernos de la
+                contaminación nociva y las enfermedades infecciosas.
+                <br /> En <strong class="prockeep">prockeep</strong> siempre buscamos la excelencia, es por esto que
+                nuestro servicio de
+                <strong><i>Desinfección de Alto Nivel</i></strong> se basa en la tecnología
+                a base Peróxido de hidrógeno vía área
+
+                <p>
+                    <div class="img-fluid da-img">
+                        <img src="./img/desinfeccion.jpg" alt="" class=" caption img-responsive img-circle da-s55" >
+                    </div>
+                    Nuestro proceso de desinfección de alto nivel es capaz de destruir todos los
+                    microorganismos de cualquier forma de organización (bacterias, micobacterias,
+                    esporas, hongos, virus y biofilms). Alcanzando la reducción de 4-5 log. es decir, 10.000
+                    / 100.000 veces menos cantidad de gérmenes.
+                    <strong>Bio-Keep System</strong> a desarrollado protocolos especiales a través de los cuales
+                    permiten
+                    llegar a una alta reducción microbiana igual al nivel de la esterilización logrando una
+                    reducción de muerte de <strong>6 log (99.9999%)</strong> de organismos infecciosos, incluidos
+                    C.diff,
+                    MRSA, Norovirus y otros patógenos dañinos.
+                </p>
+            </p>
+        </section>
+
+        <section id="content2" class="tab-content">
+            <h3 class="h3-movile">Sanitizacíon Especializada</h3>
+            <p>La Sanitización son proceso que se realizan manualmente, es por esto que en <strong
+                    class="prockeep">prockeep</strong>,
+                hemos optado por utilizar la tecnología para obtener resultados mas eficientes, en la reducción de
+                microorganismos tales como bacterias, esporas, virus y hongos
+            </p>
+            <h5>Sanitización Inteligente</h5>
+            <p>Nuestra Sanitización Inteligente consiste en la remoción de material orgánico e
+                inorgánico, manchas y detritus visibles. Estos Procedimiento son sumamente
+                importante ya que la suciedad inactiva protege a los virus y microorganismos de ser
+                eliminados con los productos tradicionales, con un método estandarizado y utilizando
+                tecnología de ultima generación <strong class="prockeep">prockeep</strong> determina mediante prueba de
+                hisopos,
+                tanto la carga inicial de materia orgánica como la carga inicial de bacteria, hongos y
+                virus, este paso es fundamental para conocer el producto a utilizar así como su
+                cantidad a fin de garantizar alta eficiencia en los resultados de nuestro método.<br />
+                <span class="mt-3">Nuestro proceso de <strong>Sanitización Inteligente </strong> consta de los pasos
+                    siguientes:</span>
+                <ul>
+                    <li class="start-li">
+                        <span class="title">Prueba Inicial</span>
+                        <p class="list">System Plus ATP (Carga inicial de Materia Organica)</p>
+                        <p class="list">System Plus Microbacteriana (Carga inicial de bacterias,hongos y virus)</p>
+                        <div class="img-fluid st-img"><img src="./img/sonitizacion.png" alt=""
+                                class=" caption img-responsive img-circle"></div>
+
+                    </li>
+                    <li>
+                        <span class="title">Sanitización</span>
+                        <p class="list">
+                            <span>Ejecucion de Modelo de sanitizacíon segun prueba inicial</span>
+                            <p class="list">Productos a utilizar segun modelo</p>
+                            <ul>
+                                <li class="sub-list">Peróxido de hidrógeno vía aérea</li>
+                                <li class="sub-list">Desinfectante de Pulverización Directa</li>
+                                <li class="sub-list">Desinfectante a Base de Cloruro</li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li class="mb-3">
+                        <span class="title">Prueba Final</span>
+                        <p class="list">System Plus ATP (Carga final de Materia Organica)</p>
+                        <p class="list">System Plus Microbacteriana (Carga final de bacterias,hongos y virus)</p>
+                    </li>
+                    <li>
+                        <span class="title">Sistema de Monitoreo y Vigilancia</span>
+                        <p class="list">A través de nuestro Sistema <strong>C-Keep</strong> hacemos el análisis de datos
+                            de las
+                            cargas bacteriológicas del las superficies y las áreas intervenida</p>
+                        <p class="list">Recomendaciones según datos arrojados en el Monitoreo y Vigilancia.</p>
+                    </li>
+                </ul>
+            </p>
+
+        </section>
+
+        <section id="content3" class="tab-content">
+            <h3 class="h3-movile">Gestíon de Procesos Complementaria</h3>
+            <p>Procesos Complementarios son aquellos que no pertenecen a su actividad de negocio, es por esto que
+                <strong class="prockeep">prockeep</strong> es tu mejor alíado.
+                Dejanos ayudarte gestionando todos aquellos procesos que no forman parte del giro principal de su
+                negocio.<br />
+                <h5>¿En qué consiste la gestión de procesos?</h5>
+                <p>La gestión por procesos, también conocida como BPM (Business Process Management), surgió en el mundo
+                    empresarial comercial y se ha aplicado a muchos campos;
+                    entre ellos, el sector salud. <i>"cuando se trata de una organización, los procesos estratégicos y
+                        los de apoyo están relacionados con las propias unidades orgánicas y,
+                        con menos frecuencia, con proveedores ajenos. Sin embargo, los procesos operativos se vinculan
+                        con determinadas unidades orgánicas y siempre con el cliente"</i>. <br />
+                    <br />
+                    La finalidad de la gestíon de proceso es conseguir unos resultados que coincidan con los objetivos
+                    previstos.
+
+                    Esto implica que el proceso debe poder ser:
+                    <ul class="gs-list">
+                        <li class="list"> Definible, debe tener un flujo (una secuencia de actividades)</li>
+                        <li class="list">Métodos para realizar dichas actividades (protocolos, procedimientos)</li>
+                        <li class="list">Plan de inspección y control de calidad</li>
+                        <li class="list">Metas a conseguir</li>
+                        <li class="list">Debe poder ser reproducible</li>
+                        <li class="list">Debe ser predecible en cuanto a resultados finales</li>
+                    </ul>
+                    <div class="img-fluid gs-img"><img src="./img/gestion.png" alt=""
+                            class=" caption img-responsive img-circle"></div>
+                </p>
+            </p>
+
+        </section>
+
+    </div>
