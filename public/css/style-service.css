@@ -3,7 +3,12 @@
     margin: 0 auto;
     display: block;
 }
-
+.img-standart-h{
+    height: 279px !important;
+}
+.img-standart-h-2{
+    height: 239px !important;
+}
 .purple{
     width: 100%;
     color: #202c2d;

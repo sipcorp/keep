@@ -5,15 +5,14 @@
         padding: 40px !important; 
         width:620px !important;
     }
-  }
+}
   @media screen and (max-width: 767px) {
-      #parallax-world-of-ugg .block {
-          text-align: start !important;
-      }
-      #parallax-world-of-ugg p {
-      
-          letter-spacing: 0px !important;
-      }
+    #parallax-world-of-ugg .block {
+        text-align: start !important;
+    }
+    #parallax-world-of-ugg p {
+        letter-spacing: 0px !important;
+    }
     #parallax-world-of-ugg .block {
         padding: 30px !important; 
         width:420px !important;
@@ -32,9 +31,7 @@
         height: 509px !important;
     }
     .brand-title {
-  
         margin-top: 37px !important;
-       
     }
     .slider{
         margin-bottom: -245px;
@@ -63,48 +60,124 @@
         transition: opacity 0.3s;
         opacity: 0;
     }
-    
-  }
+
+    /*SERVICIO CSS*/
+    .zoom1 {
+        width: 334px;
+        top: 9px;
+    }
+    .d3,
+    .d2,
+    .d3r,
+    .d10{
+        display: none;
+    }
+    .d2r {
+        position: absolute;
+        top: -156px;
+        left: 6px;
+        width: 342px;
+    }
+    .purple {
+        font-size: 25px;
+    }
+    .blog-card {
+        margin-bottom: -53px;
+    }
+    .just {
+        margin-top: 22px;
+    }
+    .blog-card .blog-table {
+        padding: 15px 15px;
+    }
+    .ul-style {
+        justify-content: center;
+        align-items: center;
+        margin-left: 19px;
+    }
+    .noDisplay{
+        display: none !important;
+    }
+    /*ESTILOS DE TOP LEF RIGHT Y BOOTON MOBILE*/
+    .mbt-4{
+        margin-top: -34px !important;
+    }
+    .mbt-3{   
+        margin-top: -60px;
+    }
+    .mbb-5{
+        margin-bottom: 53px;
+    }
+
+    /*EFECTIVIDADA BIOLOGICA*/
+
+    .toggle_option_slider {
+        width: 94px !important;
+        height: 33px !important;
+        position: absolute !important;
+        top: -12px !important;
+        right: 14px !important;
+        -webkit-border-radius: 50px !important;
+        -moz-border-radius: 50px !important;
+        border-radius: 50px !important;
+        -webkit-transition: all .4s ease !important;
+        -moz-transition: all .4s ease !important;
+        -o-transition: all .4s ease !important;
+        -ms-transition: all .4s ease !important;
+        transition: all .4s ease !important;
+    }
+
+    #first_toggle:checked ~ .toggle_option_slider {
+        background: #e67e22;
+        left: 5px !important;
+    }
+    #second_toggle:checked ~ .toggle_option_slider {
+        background: #e67e22;
+        left: 110px !important;
+    }
+}
+
   @media screen and (max-width: 479px) {
     #parallax-world-of-ugg .block {
         padding: 30px 15px !important; 
-        width:290px !important;}
-  }
+        width:290px !important;
+    }
+}
 
 
   /* Media Queries Header Page*/
 /**************************/
 @media(max-width: 786px) {
-	.menu {
-		display: none !important;
-	}
-	.menu-icon {
-		height: 91px !important;
-	}
-	.logo {
-		position: fixed !important;
-		top: 0;
-		margin-top: 16px !important;
-	}
-	nav ul {
-		max-height: 0px !important;
-		background: #000 !important;
-		overflow: initial !important ;
-	}
-	nav.black ul {
-		background: #000 !important;
-	}
-	.showing {
-		max-height: 34em !important;
-	}
-	nav ul li {
-    box-sizing: border-box !important;
-    width: 100% !important;
-    padding: 11px !important;
-    text-align: center !important;
-	}
-	.menu-icon {
-		display: block !important;
+    .menu {
+        display: none !important;
+    }
+    .menu-icon {
+        height: 91px !important;
+    }
+    .logo {
+        position: fixed !important;
+        top: 0;
+        margin-top: 16px !important;
+    }
+    nav ul {
+        max-height: 0px !important;
+        background: #000 !important;
+        overflow: initial !important ;
+    }
+    nav.black ul {
+        background: #000 !important;
+    }
+    .showing {
+        max-height: 34em !important;
+    }
+    nav ul li {
+        box-sizing: border-box !important;
+        width: 100% !important;
+        padding: 11px !important;
+        text-align: center !important;
+    }
+    .menu-icon {
+        display: block !important;
     }
     #nav ul.main {
         list-style-type: none;

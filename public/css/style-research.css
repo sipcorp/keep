@@ -253,6 +253,7 @@ section .section-title {
   margin: 0;
   transition: color 200ms ease-in 0s;
 }
+
 @media only screen and (max-width: 748px) {
   .card-fix-with{
     width: 290px;
@@ -260,13 +261,13 @@ section .section-title {
   .notify-badge {
     position: absolute;
     right: -1px;
-    top: 144px;
+    top: 132px;
     background: #6c757d;
     text-align: center;
     border-radius: 8px 0px 0px 8px;
     color: #ffffff;
-    padding: 5px 10px;
-    font-size: 10px;
+    padding: 0px 9px 0px 10px;
+    font-size: 11px;
 }
 .top-movile{
   top: 171px;
@@ -277,7 +278,7 @@ section .section-title {
 }
 #second_toggle:checked ~ .toggle_option_slider {
   background: #e67e22;
-  left: 114px !important;
+  left: 110px !important;
 }
 .toggle_radio label {
   font: 82%/1.618 "Source Sans Pro" !important;
@@ -290,6 +291,9 @@ section .section-title {
   width: 320px !important;
 } 
 }
+
+
+
 
 .btn-lg, .btn-group-lg>.btn {
   padding: 10px 16px;
@@ -304,6 +308,7 @@ section .section-title {
   height: 50px;
   width: 705px;
   margin-top: 26px;
+  margin-bottom: 32px;
   letter-spacing: 4px;
 }
 .toggle_radio > * {

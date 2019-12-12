@@ -203,9 +203,13 @@ a:hover {
 		width: 83% !important;
 	}
 	.img-movile {
-		width: 79%;
+		width: 72%;
 		position: relative;
 		top: 10px;
+	}
+	.navbar-header {
+		margin-right: 0;
+		margin-left: 0;
 	}
 	.breadcrumb li a:after {
 		content: " ";
@@ -334,6 +338,12 @@ a:hover {
 .smooth {
 	color: #ffffff;
 }
+
+.mva{
+    width: 325px;
+    float: left;
+    margin-left: 16px;
+}
 /*Contact*/
 
 
@@ -353,7 +363,8 @@ a:hover {
 }
 
  ::-webkit-scrollbar-thumb {
-	background: #525965;
+	background:#000;
+	 /* #525965; */
 	border: 0px none #ffffff;
 	border-radius: 0px;
 }
@@ -697,6 +708,9 @@ a:hover {
 	color: #ffffff;
 	text-shadow: 3px 5px 2px #474747; */
 }
+
+
+
 
 @font-face {
 	src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/TESLA.ttf");
@@ -1117,7 +1131,7 @@ a:hover {
 	background-size: cover;
 	width: 200%;
 	height: 200%;
-	background-image: url("img/2283.jpg");
+	background-image: url("img/slider1.jpeg");
 }
 
 .slider--el.anim-4parts .part.top {
@@ -1207,14 +1221,33 @@ a:hover {
 	opacity: 0;
 }
 
+.small--slider{
+	background: #0066b2;
+    color: #ffff;
+    padding: 13px;
+    font-size: 27px;
+    border-radius: 11px;
+    text-align: start;
+    margin-left: -156px;
+    line-height: 85px;
+}
 .slider--el-heading {
-	font-size: 98px;
+	font-size: 47px;
+    font-family: Impact, Charcoal, sans-serif, fantasy;
+    line-height: 83px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    color: #FFF;
+    text-align: start;
+    margin-top: 163px;
+    margin-left: -155px;
+	/* font-size: 98px;
 	font-family: Impact, Charcoal, sans-serif, fantasy;
 	line-height: 122px;
 	letter-spacing: 12px;
 	text-transform: uppercase;
 	color: #FFF;
-	text-align: center;
+	text-align: center; */
 }
 
 .slider--el.removed .slider--el-content {
@@ -1223,10 +1256,10 @@ a:hover {
 
 
 .nav-item {
-	font-family: Century Gothic;
-	margin: 0 auto;
-	padding: 2em 1em;
-	text-align: center;
+    font-family: Century Gothic;
+    margin: 0 auto;
+    padding: 2em 9px;
+    text-align: center;
 }
 
 .nav-item a {
@@ -1351,16 +1384,14 @@ nav {
 }
 
 nav ul {
-	line-height: 60px;
 	list-style: none;
-	background: rgba(0, 0, 0, 0);
-	overflow: hidden;
-	color: #fff;
-	padding: 0;
-	text-align: right;
-	margin: 0;
-	padding-right: 40px;
-	transition: 1s;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    transition: 1s;
 }
 
 nav.black ul {

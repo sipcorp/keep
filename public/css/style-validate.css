@@ -239,6 +239,7 @@ ul {
 }
 
 /*A ACTIVE*/
+
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: #fff;
     background-color: #9fcd3b;
@@ -390,6 +391,12 @@ ul {
 }
 /*MEDIA QUERY*/
 @media (max-width: 767.98px){
+    .nav {
+        position: inherit;
+        width: auto;
+        line-height: inherit;
+        z-index: unset;
+    }
     .section-heading-three h2 {
         font-size: 31px;
         line-height: 33px;
